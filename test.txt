@@ -1,4 +1,4 @@
-Hello
+Hello in master branch
 
 git add 파일명
 git commit -m 메세지
