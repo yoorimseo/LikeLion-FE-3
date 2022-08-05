@@ -1,3 +1,5 @@
+# git? 버전 관리 프로그램!
+
 Hello in master branch
 
 git add 파일명
@@ -22,8 +24,31 @@ git difftool    // h j k l 방향키, :q or :qa 종료
 git commit --global diff.tool vscode
 git commit --global difftool.vscode.cmd'code --wait --diff $LOCAL $REMOTE'
 
-git branch 브랜치 이름
-git switch 브랜치 이름
+-------------------
+
+# 브랜치 생성
+git branch 브랜치명
+git switch 브랜치명
 git status // 현재 어떤 브랜치에 있는지 확인 가능
 
 git log --oneline --all --graph    // branch와 commit 내역 확인
+
+# 브랜치 삭제
+git branch -d 브랜치명  // merge 완료된 브랜치 삭제
+git branch -D 브랜치명  // merge 안한 브랜치 삭제
+
+# 다양한 merge 방법(3-way, fast-forword, squash, rebase)
+git merge 신규 브랜치명
+// 중심 브랜치로 넘어와서 진행
+// ex) 중심 브랜치와 test 브랜치에서 같은 파일, 같은 줄을 수정했을 경우 > merge comflict! > 해당 부분 수정하고 다시 커밋
+
+git rebase 중심 브랜치명
+// rebase는 브랜치의 시작점을 다른 commit으로 옮겨주는 행위
+// merge 말고 rebase를 사용하여 합치기 > 간단하고 짧은 브랜치들을 깔끔하게 합칠 수 있음, 그러나 충돌이 많이 발생할 수 있음
+// 중심 브랜치가 아닌 신규 브랜치로 넘어와서 진행 > 그리고 중심 브랜치로 와서 merge
+
+git merge --squash 브랜치명
+// 새 브랜치에 있던 코드 변경사항들이 중심 브랜치로 텔레포트!
+// 중심 브랜치로 넘어와서 진행 > 그리고 커밋
+
+-------------------
