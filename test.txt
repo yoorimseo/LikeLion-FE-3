@@ -1,1 +1,4 @@
 Hello
+
+git add 파일명
+git commut -m 메세지
