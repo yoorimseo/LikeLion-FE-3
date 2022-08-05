@@ -25,3 +25,5 @@ git commit --global difftool.vscode.cmd'code --wait --diff $LOCAL $REMOTE'
 git branch 브랜치 이름
 git switch 브랜치 이름
 git status // 현재 어떤 브랜치에 있는지 확인 가능
+
+git log --oneline --all --graph    // branch와 commit 내역 확인
