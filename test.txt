@@ -1,4 +1,29 @@
 Hello in master branch
 
 git add 파일명
-git commit -m 메세지
+git commit -m '메세지'
+
+git add 파일명1 파일명2            // 여러 파일을 동시에 스테이징
+git add .                      // 작업폴더의 모든 파일을 전부 스테이징
+
+git status                     // 지금 변경된 파일, 스테이징된 파일 확인
+
+git restore -- staged 파일명    // 스테이징 된 파일 취소
+
+// 커밋 기록을 한 눈에 확인하기
+git log --all --oneline
+git log --all --oneline --graph
+// j, k로 위아래 스크롤 q로 종료
+
+git diff        // 수정된 부분 확인 가능
+git difftool    // h j k l 방향키, :q or :qa 종료
+
+// git difftool을 Vim 말고 VSCodeh로 열고 싶으면?
+git commit --global diff.tool vscode
+git commit --global difftool.vscode.cmd'code --wait --diff $LOCAL $REMOTE'
+
+git branch 브랜치 이름
+git switch 브랜치 이름
+git status // 현재 어떤 브랜치에 있는지 확인 가능
+
+git log --oneline --all --graph    // branch와 commit 내역 확인
