@@ -1,0 +1,19 @@
+// git branch 방법론
+- 브랜치 관리가 쉬워짐
+- 팀원이 많아도 개발 절차가 매끄러워짐
+
+1. git flow
+- 안정적인 release 추구, 5개의 브랜치를 운영
+    - main
+    - develop : 개발용
+    - feature : develop에 기능 추가
+    - hotfix : main 브랜치 버그 해결
+    - release : develop 브랜치를 main 브랜치에 합치기 전에 최종 테스트용
+
+2. Trunk-based
+- 바로 배포 가능하고 크게 업데이트를 하지 않는 프로그램에 주로 사용
+- 한 브랜치에서만 관리하기 때문에 편리
+- 크게 개발해서 한 번에 merge하는 것보다 작은 단위로 merge하는 것이 더 안전
+- 테스트나 코드 리뷰를 자주 해야 함 > 테스트를 자주하고 자동화해놓는 곳이면 제대로 사용 가능
+    - main
+    - feature

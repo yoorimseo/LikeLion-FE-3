@@ -66,6 +66,39 @@ git reset --mixed 커밋id    // 리셋이지만 변동사항을 지우지 않�
 
 -------------------
 
-git push -u 저장소주소 master
+git push -u 저장소주소 master         // -u : 주소를 기억하라는 뜻이기 때문에, 그 다음부터는 git push만 해도 가능
 
 git remote add 변수이름 저장소 주소     // 저장소 주소를 변수에 저장해서 사용하기
+
+-------------------
+
+git clone 저장소주소                  // 내가 원하는 폴더 > vscodep에서 열기 > 해당 코드 복제 가능
+// 깃헙 > 세팅 > collaborators에 팀원의 깃헙 아이디 등록해놔야 git push 가능
+
+git pull 저장소주소                   // 다른 사람이 먼저 push를 해서 안 되는 경우에 사용
+// 이전에 같은 저장소로 git push한 내용이 있으면 git pull만 해도 가능, 후에 push 진행
+// 브랜치 명시 가능, 저장소주소 변수에 저장해서 사용 가능
+// git pull > git fetch + git merge의 축약어
+// git fetch : 커밋 중에 로컬에 없는 신규 커밋을 가져오라는 뜻
+// git merge : 그것을 merge하라는 의미
+
+-------------------
+
+git push 저장소주소 브랜치명        // 로컬 브랜치를 저장소에 업로드
+
+-------------------
+# 코르를 잠깐 다른 곳에 보관하기
+git stash
+git stash save '메모'
+
+git stash list          // 현재 stash 되어 있는 코드 목록 전부 출력
+
+git stash pop           // 가장 최근에 보관했던 코드를 다시 불러옴
+
+git stash drop 삭제할id   // 특정 stash 삭제
+git stash clear         // 모든 stash 삭제
+
+git stash -p            // 일부 코드만 gti stash, 코드를 훑으
+
+// 주석처리하는 것과 용도가 비슷하지만, 주석은 커밋할 때 반영되기 때문에 기록이 더러워질 수 있음
+// stash 말고 브랜치를 새로 만들어서 코드를 작성하는 것도 나쁘지 않음
