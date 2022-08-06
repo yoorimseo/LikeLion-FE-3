@@ -52,3 +52,20 @@ git merge --squash 브랜치명
 // 중심 브랜치로 넘어와서 진행 > 그리고 커밋
 
 -------------------
+
+# 파일 되돌리기
+git restore 파일명
+
+// 이전에 작업한 것을 제거하는 커밋 생성하기
+git revert 특정커밋id        // 커밋 id 여러개 취소 가능
+git revert HEAD            // 최근 커밋 취소 가능
+
+git reset --hard 커밋id     // 해당 커밋이 생성된 시점으로 모두 돌아감, 협업 시에 사용금지
+git reset --soft 커밋id     // 리셋이지만 변동사항을 지우지 않고 스테이징 해놓음
+git reset --mixed 커밋id    // 리셋이지만 변동사항을 지우지 않고 unstage 해놓음
+
+-------------------
+
+git push -u 저장소주소 master
+
+git remote add 변수이름 저장소 주소     // 저장소 주소를 변수에 저장해서 사용하기
