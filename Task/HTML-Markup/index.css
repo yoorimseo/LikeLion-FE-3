@@ -1,4 +1,5 @@
-body, h1 {
+/* Reset */
+body, h1, h2, p {
     margin: initial;
 }
 
@@ -30,6 +31,9 @@ button {
     padding: initial;
 }
 
+/* Components */
+
+/* header */
 .nav {
     font-weight: 500;
     font-size: 20px;
@@ -52,4 +56,83 @@ button {
     border: 2px solid lightgray;
     border-radius: 3px;
     margin-left: 305px;
+}
+
+/* section-1 */
+.section-1 {
+    background-color: #FFCF5C;
+    display: flex;
+    flex-direction: row;
+}
+
+.banner {
+    display: flex;
+    flex-direction: row;
+    padding-right: 168px;
+    margin-left: auto;
+}
+
+.main-content {
+    width: 500px;
+    margin-left: -65px;
+}
+
+.sub-title {
+    margin: 164px 0 18px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.main-title {
+    font-weight: 800;
+    font-size: 100px;
+    line-height: 100px;
+    text-transform: uppercase;
+    color: #3A2A21;
+}
+
+.explain {
+    margin-left: 12px;
+    color: #3A2A21;
+}
+
+.main-btn {
+    width: 180px;
+    height: 64px;
+    border-radius: 10px;
+    margin: 49px 9px 0 0;
+    text-align: center;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.join {
+    background-color: #3A2A21;
+    color: #FFFFFF;
+}
+
+.button {
+    color: #3A2A21;
+    border: 1px solid #3A2A21;
+}
+
+.goto-lecture {
+    margin: 60px auto 0 0;
+}
+
+.lecture {
+    width: 124px;
+    height: 171px;
+    border-radius: 10px;
+    background-size: cover;
+}
+
+.aside-1 {
+    background-image: url(images/aside_1.png);
+}
+
+.aside-2 {
+    background-image: url(images/aside_2.png);
 }
