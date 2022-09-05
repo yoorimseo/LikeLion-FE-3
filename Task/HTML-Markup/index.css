@@ -1,5 +1,5 @@
 /* Reset */
-body, h1, h2, p {
+body, h1, h2, h3, p {
     margin: initial;
 }
 
@@ -12,6 +12,11 @@ header {
     align-items: center;
 }
 
+main {
+    width: fit-content;
+    margin: 0 auto;
+}
+
 h1 {
     width: 131px;
     font-weight: 700;
@@ -19,6 +24,13 @@ h1 {
     line-height: 28px;
     color: #3A2A21;
     margin-right: 182px;
+}
+
+h3 {
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 24px;
+    padding-bottom: 11px;
 }
 
 a {
@@ -29,6 +41,12 @@ button {
     border-style: none;
     background-color: transparent;
     padding: initial;
+}
+
+ul {
+    margin: initial;
+    padding: initial;
+    list-style-position : inside;
 }
 
 /* Components */
@@ -135,4 +153,35 @@ button {
 
 .aside-2 {
     background-image: url(images/aside_2.png);
+}
+
+/* section-2 */
+.section-2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 94px 0 107px 0;
+}
+
+.list {
+    width: 340px;
+}
+
+.space {
+    margin: 0 120px 0 120px;
+}
+
+.definition {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #767676;    
+}
+
+.definition li {
+    padding-left: 11px;
+}
+
+.definition li::marker {
+    font-size: 10px;
 }
