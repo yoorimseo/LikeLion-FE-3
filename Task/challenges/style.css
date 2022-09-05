@@ -1,0 +1,40 @@
+body {
+    background-image: url(images/bg.png);
+    background-size: cover;
+}
+
+h1, p{
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.wrapper {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.header img {
+    display: block;
+}
+
+.content {
+    background-color: rgb(146, 89, 14);
+    max-width: fit-content;
+    padding: 20px;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 10px 0 0 rgba(81, 49, 8, 0.844);
+}
+
+.name {
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.info {
+    width: auto;
+    line-height: 22px;
+}
