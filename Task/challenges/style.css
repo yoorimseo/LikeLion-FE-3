@@ -1,3 +1,4 @@
+/* Reset */
 body {
     background-image: url(images/bg.png);
     background-size: cover;
@@ -8,15 +9,19 @@ h1, p{
     font-weight: inherit;
     margin: 0;
     padding: 0;
+}
+
+/* Components */
+.text-white {
     color: white;
 }
 
 .wrapper {
-    width: 300px;
+    width: fit-content;
     margin: 0 auto;
 }
 
-.header img {
+.top-img img {
     display: block;
 }
 
@@ -28,7 +33,7 @@ h1, p{
     box-shadow: 0 10px 0 0 rgba(81, 49, 8, 0.844);
 }
 
-.name {
+.title {
     font-size: 30px;
     font-weight: bold;
     padding-bottom: 5px;
