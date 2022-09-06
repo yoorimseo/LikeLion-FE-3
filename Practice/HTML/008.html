@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img
+    srcset="./images/jeju-island.jpg 700w,
+            ./images/jeju-island.jpg 600w,
+            ./images/jeju-island.jpg 300w"
+    sizes="(min-width: 960px) 250px,
+            (min-width: 620px) 150px,
+            300px"
+    src="./images/jeju-island.jpg"
+    alt="제주도">
+
+    <picture>
+        <source srcset="./sample/a.jpg" media="(min-width:960px)">
+        <source srcset="./sample/b.jpg" media="(min-width:620px)">
+        <img src="./sample/c.jpg" alt="제주도에서 풀을 뜯는 말">
+    </picture>
+</body>
+</html>
