@@ -1,6 +1,7 @@
 /* Reset */
 body, h1, h2, h3, p {
     margin: initial;
+    padding: initial;
 }
 
 header {
@@ -15,15 +16,6 @@ header {
 main {
     width: fit-content;
     margin: 0 auto;
-}
-
-h1 {
-    width: 131px;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 28px;
-    color: #3A2A21;
-    margin-right: 182px;
 }
 
 h3 {
@@ -49,9 +41,21 @@ ul {
     list-style-position : inside;
 }
 
+.ir {
+    height: 0;
+    line-height: 0;
+    font-size: 0;
+    overflow: hidden;
+    text-indent: -10000px;
+}
+
 /* Components */
 
 /* header */
+.header-logo {
+    margin-right: 182px;
+}
+
 .nav {
     font-weight: 500;
     font-size: 20px;
