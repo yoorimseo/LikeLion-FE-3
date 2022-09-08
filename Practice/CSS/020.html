@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+
+        .left-ear {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: bisque;
+            border: 10px solid black;
+            border-radius: 100px 20px 20px 20px;
+        }
+        .right-ear {
+            right: 220px;
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: bisque;
+            border: 10px solid black;
+            border-radius: 20px 100px 20px 20px;
+        }
+        .face {
+            top: 40px;
+            left: 40px;
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background-color: bisque;
+            border: 10px solid black;
+            border-radius: 50%;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="left-ear"></div>
+    <div class="right-ear"></div>
+    <div class="face"></div>
+</body>
+</html>
