@@ -36,8 +36,9 @@ header {
     margin-top: 120px;
 }
 
-main {
+main, footer {
     text-align: center;
+    color: #FFFFFF;
 }
 
 .wrapper {
@@ -70,13 +71,58 @@ main {
     background-position: center;
     font-family: 'GmarketSansMedium';
     font-size: 18px;
-    line-height: 18px;
-    color: #FFFFFF;
+    line-height: 30px;
 }
 
 .tit-desc {
     font-family: 'GmarketSansBold';
-    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+}
+
+.cont-inp {
+    margin-top: 102px;
+}
+
+.cont-inp input {
+    width: 228px;
+    height: 57px;
+    background: #FFFFFF;
+    border-radius: 7px;
+    margin: 0 17px 0 17px;
+}
+
+.txt-wannabe {
+    font-family: 'GmarketSansMedium';
     font-size: 24px;
     line-height: 24px;
+}
+
+.txt-wannabe:nth-child(2) {
+    margin-top: 27px;
+}
+
+.btn-exc {
+    margin: 115px 0 147px 0;
+    background: #FCEE21;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 56px;
+    width: 565px;
+    height: 66px;
+    color: #5B2386;
+    font-family: 'GmarketSansBold';
+    font-size: 24px;
+    line-height: 24px;
+}
+
+.txt-wannabe:nth-child(3) {
+    margin-top: 17px;
+}
+
+.txt-wannabe strong {
+    font-family: 'GmarketSansBold';
+    font-size: 72px;
+    line-height: 72px;
+    margin: 0 12px 0 12px;
+    vertical-align: middle;
 }
