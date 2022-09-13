@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title></title>
+        <style>
+            .parent {
+                background-color: red;
+                height: 200px;
+                margin-top: 50px;
+                /* 가장 많이 사용! */
+                /* overflow: hidden; */
+
+                /* display: inline-block;  컨텐츠 크기만큼 영역을 차지! */
+
+                /* 불필요한 디자인 요소가 들어가기 때문에, border가 들어가는 경우에만 사용! */
+                /* border: 1px solid black; */
+                /* boreder: 0.01px solid transparent */
+
+                /* 아래 방법은 IE 지원 불가로 사용이 어려울 수 있다. */
+                /* display: flow-root */
+            }
+
+            .child {
+                width: 100px;
+                height: 100px;
+                background-color: blue;
+                margin-top: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="parent">
+            <div class="child"></div>
+        </div>
+    </body>
+</html>

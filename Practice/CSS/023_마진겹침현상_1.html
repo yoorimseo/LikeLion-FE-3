@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title></title>
+        <style>
+            /* 마진병합현상은 일부러 의도한 CSS다. */
+            /* 대부분의 경우 문제로 여겨지지 않고, 해결하지 않아도 된다. */
+            /* 형제간의 마진겹침현상 */
+            /* 종찬강사님 : https://www.youtube.com/watch?v=4p7gPzAtVqc */
+            div:nth-child(1) {
+                margin-bottom: 30px;
+            }
+
+            div:nth-child(2) {
+                margin-top: 60px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>hello world</div>
+        <div>hello world</div>
+    </body>
+</html>
