@@ -1,0 +1,233 @@
+/* font */
+@font-face {
+    font-family: 'OTEnjoystoriesBA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 400;
+    src: url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2") format('woff2'),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff") format('woff'),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf") format('opentype');
+}
+
+/* Layouts */
+.wrapper {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+/* Components */
+body {
+    background-color: rgba(91, 35, 134, 1);
+}
+
+header {
+    margin-top: 120px;
+}
+
+main, footer {
+    text-align: center;
+    color: #FFFFFF;
+}
+
+footer {
+    padding-bottom: 70px;
+}
+
+button {
+    width: fit-content;
+    padding: 21px 49px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 56px;
+    color: #5B2386;
+    font-family: 'GmarketSansBold';
+    font-size: 24px;
+    line-height: 24px;
+    border-style: none;
+}
+
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+/* header */
+.tit-timelaw {
+    background-image: url(../img/clock.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    height: 265px;
+}
+
+.tit-timelaw img {
+    width: 564px;
+    height: 112px;
+    margin-top: 74px;
+}
+
+.img-txt {
+    margin: 46px 0 78px 0;
+
+}
+
+/* main */
+.txt-desc {
+    background-image: url(../img/quotes.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'GmarketSansMedium';
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.tit-desc {
+    font-family: 'GmarketSansBold';
+    font-size: 24px;
+    line-height: 36px;
+}
+
+.cont-inp {
+    margin-top: 102px;
+}
+
+.cont-inp input {
+    width: 228px;
+    height: 57px;
+    background: #FFFFFF;
+    border-radius: 7px;
+    margin: 0 17px 0 17px;
+    font-family: 'GmarketSansBold';
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+}
+
+.txt-box {
+    margin: 147px 0 127px 0;
+}
+
+.txt-wannabe {
+    font-family: 'GmarketSansMedium';
+    font-size: 24px;
+    line-height: 24px;
+}
+
+.txt-wannabe input::placeholder {
+    font-family: 'GmarketSansMedium';
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+    color: #BABCBE;
+}
+
+.txt-wannabe:nth-child(2) {
+    margin-top: 27px;
+}
+
+.cont-btn-time {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.btn-exc {
+    margin-top: 115px ;
+    background: #FCEE21;
+}
+
+.img-click {
+    width: 64px;
+    height: 72px;
+    margin: 129px 0 0 7px;
+}
+
+.cont-result {
+    margin-bottom: 130px;
+}
+
+.txt-wannabe:nth-child(3) {
+    margin-top: 17px;
+}
+
+.txt-wannabe strong {
+    font-family: 'GmarketSansBold';
+    font-size: 72px;
+    line-height: 72px;
+    margin: 0 12px 0 12px;
+    vertical-align: middle;
+}
+
+.btn-go {
+    background: #FCEE21;
+}
+
+.btn-share {
+    background: #FFFFFF;
+    margin-left: 18px;
+}
+
+/* footer */
+.logo {
+    margin-bottom: 20px;
+}
+.txt-footer {
+    font-family: 'GmarketSansMedium';
+    font-size: 12px;
+    line-height: 17px;
+}
+
+/* modal */
+.cont-modal {
+    width: 800px;
+    height: 800px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cheerup-1 {
+    width: 396px;
+    height: 76px;
+    margin-top: 76px;
+}
+
+.cheerup-2 {
+    width: 233px;
+    height: 30px;
+    margin-top: 24px;
+}
+
+.cheerup-licat {
+    width: 433px;
+    height: 337px;
+    margin-top: 29px;
+    margin-bottom: 74px;
+}
