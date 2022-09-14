@@ -23,6 +23,7 @@ button {
 .welcome {
     font-size: 12px;
     line-height: 15px;
+    font-weight: 400;
 }
 
 .btn-login {
@@ -32,6 +33,7 @@ button {
     margin: 16px;
     color: #FFFFFF;
     font-size: 12px;
+    font-weight: 500;
     line-height: 15px;
     text-align: center;
 }
