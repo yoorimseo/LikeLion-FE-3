@@ -1,0 +1,63 @@
+/* Reset */
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border-style: none;
+}
+
+.wrapper {
+    width: fit-content;
+    margin: 0 auto;
+    padding: 19px 16px 18px 16px;
+    border: 1px solid #DBDBDB;
+    border-radius: 5px;
+}
+
+.welcome {
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.btn-login {
+    padding: 10px 108px 12px 108px;
+    background: #711BFF;
+    border-radius: 4px;
+    margin: 16px;
+    color: #FFFFFF;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+}
+
+.img-logo {
+    width: 64px;
+    height: 18px;
+    vertical-align: bottom;
+}
+
+.account {
+    padding: 0 16px;
+}
+
+.account a {
+    font-size: 12px;
+    line-height: 15px;
+    color: #767676;
+}
+
+.account a img {
+    width: 16px;
+    height: 16px;
+    vertical-align: sub;
+}
+
+.join {
+    float: right;
+}
