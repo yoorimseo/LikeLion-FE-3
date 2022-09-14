@@ -46,6 +46,8 @@ button {
 
 .account {
     padding: 0 16px;
+    background-color: aqua;
+    margin-bottom: 18px;
 }
 
 .account a {
@@ -57,7 +59,11 @@ button {
 .account a img {
     width: 16px;
     height: 16px;
-    vertical-align: sub;
+    vertical-align: text-bottom;
+}
+
+.find-id-pw {
+    float: left;
 }
 
 .join {
