@@ -5,9 +5,9 @@ body {
 
 header {
     background-color: #FFFFFF;
-    border-bottom: 5px solid #DDDDDD;
-    border-radius: 40px 40px 0 0;
-    padding: 50px 0;
+    border-bottom: 3.5px solid #DDDDDD;
+    border-radius: 30px 30px 0 0;
+    padding: 38.5px 0;
 }
 
 h1, p, ul, li {
@@ -21,34 +21,36 @@ ul {
 
 
 .bucket-list {
-    width: 550px;
+    width: 401px;
     margin: 130px auto;
     background-color: #EFEFEF;
-    border-radius: 40px;    
+    border-radius: 30px;    
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .list-title {
     color: #F2168F;
-    border-left: 15px solid #F2168F;
-    padding-left: 30px;
-    font-size: 35px;
+    border-left: 10px solid #F2168F;
+    padding-left: 22px;
+    font-size: 28px;
+    font-weight: 800;
 }
 
 .list-content {
     width: fit-content;
-    margin: 40px auto 0;
+    margin: 30px auto 0;
     padding-bottom: 20px;
 }
 
 .list-item {
-    width: 450px;
-    padding: 13px 0 13px 13px;
-    border: 6px solid #AAAAAA;
+    width: 315px;
+    padding: 10px 0 10px 15px;
+    border: 4px solid #AAAAAA;
     background-color: #FFFFFF;
     border-radius: 6px;
-    font-size: 23px;
-    margin-bottom: 20px;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 11px;
 }
 
 .success {
