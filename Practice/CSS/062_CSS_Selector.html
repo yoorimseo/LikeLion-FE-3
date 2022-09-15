@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title></title>
+        <style>
+            button {
+                border: 1px solid black;
+                border-radius: 5px;
+                padding: 15px;
+                background-color: slategray;
+                color: white;
+                transition: all 0.3s;
+            }
+            button:hover {
+                background-color: slateblue;
+                letter-spacing: 3px;
+            }
+
+            a:active {
+                color: red;
+            }
+
+            input:focus {
+                border: 5px solid royalblue;
+            }
+
+            /* +는 형제 선택자를 선택 */
+            input:checked + label {
+                background-color: lightgreen;
+            }
+        </style>
+    </head>
+    <body>
+        <!--
+            * 가상 클래스 선택자 : 클래스가 없는데 있는 것처럼 처리
+                            !  콜론이 1개
+            * 가상 요소 선택자 : 요소가 없는데 있는 것처럼 처리
+                            !  콜론이 2개
+        -->
+        <button>hello</button>
+
+        <a href="#">hello</a>
+
+        <input type="text" />
+        <input type="text" />
+
+        <input id="check" type="checkbox" />
+        <label for="check">오늘 아침은 삼겹살입니다.</label>
+
+        <ul>
+            <!-- ! 아래 ul의 li와 사촌이다. 형제가 아니다! -->
+            <li>hello</li>
+            <li>hello</li>
+            <li>hello</li>
+        </ul>
+
+        <ul>
+            <li>hello</li>
+            <li>hello</li>
+            <li>hello</li>
+        </ul>
+    </body>
+</html>

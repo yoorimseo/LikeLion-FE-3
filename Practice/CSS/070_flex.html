@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title></title>
+        <style>
+            /* 
+                1차원 배열 : flex
+                2차원 배열 : grid
+            */
+            .container {
+                display: flex;
+                /* flex-direction: row; */
+                /* flex-direction: column; */
+                /* flex-direction: row-reverse; */
+            }
+
+            .item {
+                width: 100px;
+                height: 100px;
+                background-color: lightgoldenrodyellow;
+                border: 3px solid lightgreen;
+            }
+        </style>
+    </head>
+    <body>
+        <!--
+            * 외부 디스플레이 타입 : 부모와 형제 간의 박스 배치
+            ! → inline, block, inline-block
+            
+            *내부 디스플레이 타입 : 내부 자식 박스 배치
+            ! → flex, grid …
+        -->
+
+        <div class="container">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title></title>
+        <style>
+            .container {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .box {
+                /* 
+                    flex-basis 속성은 유연한(flexible) 크기를 가진다.
+                    즉, 고정적인 width, height 값을 지정해 줄 때와 달리
+                    축의 방향에 따라, 또 내부 콘텐츠에 따라
+                    크기가 가변적, 유동적으로 변할 수 있다.
+                */
+                height: 40px;
+                border: 5px solid lightslategray;
+                background-color: lightsteelblue;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Reiciendis quo enim dolore nam velit in debitis. Tempore vel
+                maxime inventore. Ipsum non in blanditiis dolore saepe dolorem,
+                nisi similique aut? Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Reiciendis quo enim dolore nam velit in
+                debitis. Tempore vel maxime inventore. Ipsum non in blanditiis
+                dolore saepe dolorem, nisi similique aut?
+            </div>
+            <div class="box">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </div>
+            <div class="box">lorem</div>
+        </div>
+    </body>
+</html>

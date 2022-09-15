@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title></title>
+        <style>
+            /* align-items는 stretch가 기본 값, 부모의 높이를 갖게 됨 */
+            .container {
+                width: 200px;
+                height: 200px;
+                background-color: #8badd9;
+                display: flex;
+                flex-direction: row-reverse;
+                /* justify-content: flex-end; */
+                align-items: center;
+            }
+
+            .item {
+                width: 70px;
+                height: 70px;
+                background-color: #f26835;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="item"></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title></title>
+        <style>
+            /* 
+                * : 전체
+                ^ : 시작, 반대
+                $ : 끝
+            */
+
+            /* 문자열로서 포함되면 적용됨 */
+            a[href*="weniv"] {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- * #은 페이지의 최상단으로 올라간다. -->
+        <a href="#">눌러!</a>
+        <a href="weniv">눌러!</a>
+        <a href="wenivs">눌러!</a>
+        <a href="we weniv">눌러!</a>
+        <a href="we weniv we">눌러!</a>
+        <a href="wssdgsdfwenivsdfsdwe">눌러!</a>
+    </body>
+</html>

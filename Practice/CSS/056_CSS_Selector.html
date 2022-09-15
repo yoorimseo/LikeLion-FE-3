@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title></title>
+        <style>
+            /* cascading으로 처리가 됨! */
+            /* class 외에도 data라는 필드를 가진 곳에서 사용할 수도 있다 */
+            /* 자바스크립트나 새로운 애트리뷰트를 넣었을 때, 그것을 컨트롤 하는 것이 가능 */
+            div[data~="weniv"] {
+                color: black;
+            }
+
+            div[class~="weniv"] {
+                color: black;
+            }
+
+            /* 리디북스 예 */
+            /* div[data-track-params~="weniv"] {
+                color: black;
+            } */
+
+            div.weniv {
+                color: pink;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="weniv">hello world 1</div>
+    </body>
+</html>
