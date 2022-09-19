@@ -66,6 +66,7 @@ li {
 	line-height: 22px;
 	display: flex;
 	align-items: center;
+	color: #bd8fe8;
 }
 
 .project-desc::before {
