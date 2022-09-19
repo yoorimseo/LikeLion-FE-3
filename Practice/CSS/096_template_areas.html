@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>template areas</title>
+        <style>
+            body {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-areas:
+                    ". . . time"
+                    "header header header header"
+                    "left-aside main main right-aside"
+                    "footer footer footer footer";
+            }
+
+            header {
+                grid-area: header;
+                background-color: #96c9f2;
+            }
+
+            main {
+                grid-area: main;
+                background-color: #485372;
+            }
+
+            .left-aside {
+                grid-area: left-aside;
+                background-color: #c7f543;
+            }
+
+            .right-aside {
+                grid-area: right-aside;
+                background-color: #c7f543;
+            }
+
+            .time {
+                grid-area: time;
+                background-color: lightslategrey;
+            }
+
+            footer {
+                grid-area: footer;
+                background-color: #ff7769;
+            }
+        </style>
+    </head>
+    <body>
+        <p class="time"><time>22-09-19</time></p>
+        <header>header</header>
+        <main>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error
+            repellat earum iure id natus, consectetur, aut a adipisci, suscipit
+            dolore in quam commodi recusandae magni excepturi sapiente quasi
+            optio accusantium?
+        </main>
+        <aside class="left-aside">left aside</aside>
+        <aside class="right-aside">right aside</aside>
+        <footer>footer</footer>
+    </body>
+</html>

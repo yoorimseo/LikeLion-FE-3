@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            @keyframes hojun {
+                from {
+                    background-position: 0px, 0px;
+                }
+                to {
+                    background-position: -3730px, 0;
+                }
+            }
+            .building1 {
+                width: 110px;
+                height: 180px;
+                background: url(building/building1.png) no-repeat;
+                animation: hojun 5s steps(33);
+                animation-fill-mode: forwards;
+            }
+            @keyframes cat {
+                10% {
+                    transform: translateY(0) scale(0.3);
+                    background: url(cat/1.png) no-repeat;
+                }
+                20% {
+                    transform: translateX(-20px) scale(0.3);
+                    background: url(cat/2.png) no-repeat;
+                }
+                30% {
+                    transform: translateX(-40px) scale(0.3);
+                    background: url(cat/3.png) no-repeat;
+                }
+                40% {
+                    transform: translateX(-60px) scale(0.3);
+                    background: url(cat/1.png) no-repeat;
+                }
+                50% {
+                    transform: translateX(-80px) scale(0.3);
+                    background: url(cat/2.png) no-repeat;
+                }
+                60% {
+                    transform: translateX(-100px) scale(0.3);
+                    background: url(cat/3.png) no-repeat;
+                }
+                70% {
+                    transform: translateX(-120px) scale(0.3);
+                    background: url(cat/1.png) no-repeat;
+                }
+                80% {
+                    transform: translateX(-140px) scale(0.3);
+                    background: url(cat/2.png) no-repeat;
+                }
+                90% {
+                    transform: translateX(-160px) scale(0.3);
+                    background: url(cat/3.png) no-repeat;
+                }
+                100% {
+                    transform: translateX(-180px) scale(0.3);
+                    background: url(cat/1.png) no-repeat;
+                }
+            }
+            .cat {
+                width: 313px;
+                height: 436px;
+                background: url(cat/1.png) no-repeat;
+                animation: cat 1s infinite;
+                animation-fill-mode: forwards;
+                transform: scale(0.3);
+                position: absolute;
+                top: 10px;
+                left: 600px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="building1"></div>
+        <div class="cat"></div>
+    </body>
+</html>
