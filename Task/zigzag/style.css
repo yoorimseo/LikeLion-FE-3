@@ -34,68 +34,70 @@ li {
 
 /* Components */
 .wrapper {
-	/* background-color: aliceblue; */
 	width: 1080px;
 	margin: 100px auto;
 }
 
 /* Header */
 .project-header {
-	/* background-color: red; */
 	width: inherit;
-	height: 135px;
-	margin-bottom: 100px;
+	height: 150px;
+	margin-bottom: 95px;
 	display: flex;
 	flex-direction: row;
 }
 
 .project-title {
-	/* background-color: yellow; */
 	width: 26%;
-	margin-right: 110px;
 	font-size: 40px;
-	font-weight: 500;
-	line-height: 1;
+	font-weight: 600;
 	vertical-align: top;
+	color: white;
 }
 
-.portfolio::before {
-	background-color: #ff4500;
-	content: "";
-	position: absolute;
-	width: 243px;
-	height: 20px;
-	z-index: -1;
-	margin-top: 67px;
-	margin-left: -258px;
+.project-title strong {
+	box-shadow: 0 -21px 0 0 #ff4500 inset;
 }
 
 .project-desc {
-	background-color: green;
-	width: 500px;
-	padding: 25px 0;
+	width: 560px;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 22px;
+	display: flex;
+	align-items: center;
+}
+
+.project-desc::before {
+	content: "";
+	width: 52.5%;
+	height: 2px;
+	flex-grow: 1;
+	margin: 3px 24px 0 2px;
+	background-color: #bd8fe8;
 }
 
 /* Section */
 .project-contents {
 	background-color: white;
 	width: inherit;
-	height: 165px;
+	height: 163px;
 	display: flex;
 	flex-direction: row;
 	margin-bottom: 24px;
 }
 .project-contents:nth-child(2n+1) {
 	background-color: white;
-	width: inherit;
-	height: 165px;
+	height: 163px;
 	display: flex;
 	flex-direction: row-reverse;
 }
 
 .contents-header {
 	width: 26%;
-	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	background-size: cover;
 	background-position: center;
 }
@@ -104,7 +106,6 @@ li {
 	font-size: 30px;
 	font-weight: 500;
 	color: white;
-	margin: 64px 0;
 }
 
 .photo-1 {
@@ -118,34 +119,28 @@ li {
 }
 
 .contents {
-	background-color: red;
-	padding: 22px;
+	padding: 20px;
 }
 .contents:nth-child(2n) {
-	background-color: red;
 	margin-right: 25px;
 }
 
 
 .contents-subtitle {
-	background-color: blue;
 	font-size: 18px;
 	color:#673399;
-	vertical-align: baseline;
+	line-height: 1;
+	vertical-align: top;
 	margin-bottom: 26px;
 	padding-left: 3px;
 }
 
-.contents-list {
-	background-color: green;
-}
-
 .contents-list li {
-	background-color: yellow;
 	font-size: 14px;
 	line-height: 1;
-	margin-bottom: 15px;
-	vertical-align: middle;
+	vertical-align: bottom;
+	margin-bottom: 11px;
+	padding: 3px;
 }
 
 .contents-list li::before {
@@ -155,6 +150,5 @@ li {
 	height: 10px;
 	border-radius: 50%;
 	background-color: #bd8fe8;
-	margin-inline-start: 3px;
 	margin-inline-end: 10px;
 }
