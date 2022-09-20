@@ -1,0 +1,93 @@
+@font-face {
+    font-family: 'Spoqa Han Sans Neo';
+    src: url("images/fonts/SpoqaHanSansNeo-Medium.otf");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Spoqa Han Sans Neo';
+    src: url("images/fonts/SpoqaHanSansNeo-Regular.otf");
+    font-weight: 400;
+}
+
+body {
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    line-height: 15px;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+clear-fix {
+    clear: both;
+}
+
+.cont-login {
+    width: 350px;
+    margin: 20px auto;
+    padding: 18px 15px 17px;
+    border: 1px solid #DBDBDB;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.cont-login .text-login {
+    margin-bottom: 16px;
+}
+
+.cont-login .link-login {
+    display: block;
+    padding: 13px 20px 12px;
+    background-color: #711BFF;
+    border-radius: 4px;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 17px;
+}
+
+.link-login .img-login {
+    width: 57px;
+    height: 11px;
+    margin-right: 6px;
+}
+
+.cont-login .find {
+    float: left;
+}
+
+.cont-login .find * {
+    float: left;
+}
+
+.cont-login .join {
+    float: right;
+    margin-right: 2px;
+}
+
+.cont-login .join * {
+    float: left;
+}
+
+.cont-login .img-find,
+.cont-login .img-join {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+}
+
+.find [class^=link],
+.join [class^=link] {
+    color: #767676;
+    text-decoration: none;
+}
+
+.find .link-id::after {
+    display: inline-block;
+    content: '';
+    width: 1px;
+    height: 12px;
+    background-color: #767676;
+    margin: 0 6px 0 5px;
+    vertical-align: -1px;
+}
