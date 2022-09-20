@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>성배 레이아웃</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <!-- * 성배 레이아웃을 flex, grid로 만들어보자 -->
+        <h2>Flex</h2>
+        <section class="flex">
+            <header class="flex-header">
+                <h3>header</h3>
+            </header>
+            <div class="flex-main">
+                <section class="flex-section">
+                    <h4>section > article</h4>
+                </section>
+                <aside class="flex-aside">aside</aside>
+            </div>
+            <footer class="flex-footer">footer</footer>
+        </section>
+
+        <h2>Grid</h2>
+        <section class="grid">
+            <header class="grid-header">
+                <h3>header</h3>
+            </header>
+            <section class="grid-section">
+                <h4>section > article</h4>
+            </section>
+            <aside class="grid-aside">aside</aside>
+            <footer class="grid-footer">footer</footer>
+        </section>
+    </body>
+</html>
