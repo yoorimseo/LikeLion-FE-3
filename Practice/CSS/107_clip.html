@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title></title>
+        <style>
+            body {
+                background-color: lightblue;
+            }
+            div {
+                position: relative;
+                width: 500px;
+            }
+
+            img {
+                position: absolute;
+                width: 100%;
+                top: 0;
+                left: 0;
+                /* clip은 position: absolute를 사용해야 적용 가능 */
+                /* clip: rect(0 0 0 0); */
+                /* clip: rect(0 300px 400px 0); */
+                clip-path: inset(100px 10px 100px 100px);
+                /* clip은 렌더링 할 때 모양을 잘라내는 것이지 공간이 사라지는 것은 아니다 */
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <img
+                src="http://gdimg.gmarket.co.kr/2169777358/still/600?ver=1627521486"
+                alt=""
+            />
+        </div>
+    </body>
+</html>

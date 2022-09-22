@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title></title>
+        <style>
+            /* .screen_out와 .ir_wa는 숨겨야 하는 요소를  태그로 한 번 묶어줘야 한다 */
+            .ir_pm {
+                display: block;
+                overflow: hidden;
+                font-size: 1px;
+                line-height: 0;
+                text-indent: -9999px;
+            }
+
+            button {
+                width: 100px;
+                height: 100px;
+                background: url(http://gdimg.gmarket.co.kr/2169777358/still/600?ver=1627521486)
+                    0 0 / contain no-repeat;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <button class="ir_pm">복숭아 버튼입니다!</button>
+    </body>
+</html>
