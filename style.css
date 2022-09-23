@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    background-image: url(img/logo.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 386px 180px;
+}
+
+.section-cola {
+    background-color: lightslategrey;
+    width: fit-content;
+    margin: 247px auto 171px;
+    display: flex;
+}
+
+.section-machine-1 {
+    background-color: lightcoral;
+    width: 360px;
+    height: 545px;
+    margin-right: 28px;
+}
+
+.section-balance {
+    background-color: lightgreen;
+    width: 360px;
+    height: 50px;
+}
+
+.section-purchased {
+    background-color: lightsalmon;
+    width: 360px;
+    height: 474px;
+    margin-top: 20px;
+}
