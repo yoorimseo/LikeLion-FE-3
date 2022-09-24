@@ -11,17 +11,78 @@
     <body>
         <section class="section-cola">
             <!-- <img src="img/logo.png" alt="Cola Cola 로고" class="img-logo" /> -->
-            <section class="section-machine-1">
-                <h2>음료 자판기</h2>
+            <section class="section-machine">
+                <h2 class="txt-hide">음료 자판기</h2>
+                <section class="section-showcase">
+                    <h3 class="txt-hide">판매 음료 쇼케이스</h3>
+                    <div class="original-cola"></div>
+                    <div class="violet-cola"></div>
+                    <div class="yellow-cola"></div>
+                    <div class="cool-cola"></div>
+                    <div class="green-cola"></div>
+                    <div class="orange-cola"></div>
+                </section>
+                <section class="section-shopping">
+                    <h3 class="txt-hide">음료 금액 입금 및 반환</h3>
+                    <div class="cola-price">
+                        <p>잔액 :</p>
+                        <p class="cumulative-cola-price">1,000</p>
+                    </div>
+                    <button class="btn-deposit">거스름돈 반환</button>
+                    <input type="text" placeholder="입금액 입력" class="enter-deposit"></input>
+                    <button class="btn-change">입금</button>
+
+                    <section class="section-colas type-1">
+                        <div class="cola-item">
+                            <p class="cola-name">Original_Cola</p>
+                            <p class="cola-count">1</p>
+                        </div>
+                        <div class="cola-item">
+                            <p class="cola-name">Green_Cola</p>
+                            <p class="cola-count">2</p>
+                        </div>
+                        <div class="cola-item">
+                            <p class="cola-name">Orange_Cola</p>
+                            <p class="cola-count">1</p>
+                        </div>
+                        <div class="cola-item">
+                            <p class="cola-name">Violet_Cola</p>
+                            <p class="cola-count">5</p>
+                        </div>
+                    </section>
+                    <button class="btn-acquired">획득</button>
+                </section>
             </section>
 
             <div>
-                <article class="section-balance">
-                    <h3>소지금</h3>
-                </article>
+                <section class="section-balance">
+                    <div class="my-balance">
+                        <h3>소지금 :</h3>
+                        <p>25,000</p>
+                    </div>
+                </section>
 
                 <section class="section-purchased">
                     <h3>획득한 음료</h3>
+                    <section class="section-colas type-2">
+                        <div class="cola-item">
+                            <p class="cola-name">Original_Cola</p>
+                            <p class="cola-count">1</p>
+                        </div>
+                        <div class="cola-item">
+                            <p class="cola-name">Green_Cola</p>
+                            <p class="cola-count">2</p>
+                        </div>
+                        <div class="cola-item">
+                            <p class="cola-name">Orange_Cola</p>
+                            <p class="cola-count">1</p>
+                        </div>
+                        <div class="cola-item">
+                            <p class="cola-name">Violet_Cola</p>
+                            <p class="cola-count">5</p>
+                        </div>
+                    </section>
+                    <p class="total-price">9,000</p>
                 </section>
             </div>
         </section>
