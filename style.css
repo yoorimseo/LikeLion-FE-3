@@ -1,0 +1,41 @@
+@import url(reset.css);
+
+.txt-hide {
+	position: absolute;
+	clip: rect(0 0 0 0);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+}
+
+.section-login {
+    width: 440px;
+    margin: 280px auto;
+    padding: 30px;
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.section-login .img-logo {
+    width: 122px;
+    height: 24px;
+}
+
+.section-login .txt-login {
+    margin-top: 28px;
+    line-height: 20px;
+}
+
+.section-login .btn-login {
+    background: #2F80ED;
+    margin-top: 32px;
+    padding: 17px 189px 15px 190px;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 28px;
+}
