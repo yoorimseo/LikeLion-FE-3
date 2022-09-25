@@ -1,6 +1,7 @@
 /* Reset */
-body {
+body, ul, li {
     margin: 0;
+    padding: 0;
 }
 
 h2, h3 {
@@ -8,6 +9,18 @@ h2, h3 {
     padding: 0;
     font-size: inherit;
     font-weight: inherit;
+}
+
+li {
+    list-style: none
+}
+
+button, input {
+    border-style: none;
+}
+
+button {
+    cursor: pointer;
 }
 
 .txt-hide {
@@ -31,41 +44,78 @@ body {
 }
 
 .section-cola {
-    background-color: lightslategrey;
     width: fit-content;
     margin: 247px auto 171px;
     display: flex;
 }
 
 .section-machine {
-    background-color: lightcoral;
-    width: 360px;
+    background: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    width: 364px;
     height: 545px;
     margin-right: 28px;
     box-sizing: border-box;
     padding: 31px 27px 28px;
 }
 
-.section-showcase {
-    background-color: gold;
-    display: flex;
-    flex-wrap : wrap;
+.selling-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
 }
 
-.section-showcase div[class*='cola']{
+.selling-list .selling-product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 94px;
     height: 130px;
-    margin-bottom: 12px;
-    background-color: lightseagreen;
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5));
+    border-radius: 10px;
+    background: #FFFFFF;
+    box-sizing: border-box;
+    padding: 11px 11px 9px 13px;
+    color: #333333;
 }
 
-.section-showcase div:not(:nth-child(3n+1)) {
-    margin-right: 12px;
+.selling-list .selling-product:hover {
+    border: 3px solid #6327FE;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.cola-name {
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 13px;
+}
+
+.selling-product img {
+    width: 36px;
+    height: 65px;
+    margin-bottom: 6px;
+}
+
+.selling-price {
+    width: 70px;
+    box-sizing: border-box;
+    padding: 5px 0;
+    text-align: center;
+    background-color: #6327FE;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 12px;
+    color: #FFFFFF;
+    margin-top: 3px;
+}
+
+.selling-price::after {
+    content: '원';
 }
 
 .section-shopping {
-    background-color: orangered;
-    margin-top: 8px;
+    margin-top: 20px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
@@ -74,16 +124,16 @@ body {
 .type-1 {
     width: 200px;
     height: 106px;
-    overflow-y: scroll;
 }
 
 .cola-price {
-    background-color: palegreen;
+    background-color: #EAE8FE;
     width: 200px;
     box-sizing: border-box;
     padding: 6px 10px;
     display: flex;
     justify-content: space-between;
+    border-radius: 5px;
 }
 
 .cola-price p {
@@ -100,16 +150,39 @@ body {
     height: 32px;
 }
 
+.btn-deposit, .btn-change {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+.enter-deposit {
+    border: 1px solid #BDBDBD;
+    border-radius: 5px;
+    padding-left: 6px;
+}
+
+.btn-acquired {
+    background: #6327FE;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 19px;
+}
+
 .section-balance {
-    background-color: lightgreen;
+    background-color: #FFFFFF;
     width: 360px;
     height: 50px;
     box-sizing: border-box;
     padding: 9px 27px;
+    border: 2px solid #FFFFFF;
 }
 
 .my-balance {
-    background-color: dodgerblue;
+    background-color: #EAE8FE;
     height: 32px;
     display: flex;
     flex-direction: row;
@@ -119,6 +192,7 @@ body {
     padding: 6px 10px;
     font-size: 14px;
     line-height: 20px;
+    border-radius: 5px;
 }
 
 .my-balance h3 {
@@ -134,7 +208,7 @@ body {
 }
 
 .section-purchased {
-    background-color: lightsalmon;
+    background-color: #FFFFFF;
     width: 360px;
     height: 474px;
     margin-top: 20px;
@@ -149,41 +223,51 @@ body {
     line-height: 20px;
 }
 
-.section-colas {
-    background-color: tomato;
+.shopping-list {
+    background-color: #EAE8FE;
     box-sizing: border-box;
     padding: 12px 18px 12px;
+    border: 1px solid #BDBDBD;
+    border-radius: 5px;
+    overflow-y: scroll;
+}
+
+.shopping-list::-webkit-scrollbar {
+    width: 4px;
+    border-radius: 50px;
+}
+
+.shopping-list::-webkit-scrollbar-thumb {
+    background: #FFFFFF;
 }
 
 .type-2 {
     width: 306px;
     height: 364px;
-    overflow-y: scroll;
     margin-top: 13px;
 }
 
-.section-colas .cola-item {
-    background-color: yellow;
+.shopping-list .cola-item {
+    background-color: #FFFFFF;
     height: 46px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
     padding: 8px 8px 8px 10px;
+    border-radius: 5px;
 }
 
-.section-colas .cola-item:not(:last-of-type) {
+.shopping-list .cola-item:not(:last-of-type) {
     margin-bottom: 6px;
 }
 
-.section-colas .cola-name {
-    font-weight: 500;
-    font-size: 9px;
-    line-height: 13px;
+.shopping-list .cola-item img {
+    width: 18px;
+    height: 33px;
 }
 
 .cola-count {
-    background-color: dodgerblue;
     width: 30px;
     height: 30px;
     display: flex;
@@ -192,10 +276,11 @@ body {
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
+    border: 1px solid #BDBDBD;
+    border-radius: 5px;
 }
 
 .total-price {
-    background-color: lightgoldenrodyellow;
     margin-top: 6px;
     font-weight: 500;
     font-size: 12px;
