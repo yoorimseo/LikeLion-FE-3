@@ -1,297 +1,240 @@
-/* Reset */
-body, ul, li {
-    margin: 0;
-    padding: 0;
-}
+@import url(reset.css);
 
-h2, h3 {
-    margin: 0;
-    padding: 0;
-    font-size: inherit;
-    font-weight: inherit;
-}
-
-li {
-    list-style: none
-}
-
-button, input {
-    border-style: none;
-}
-
-button {
-    cursor: pointer;
-}
-
-.txt-hide {
-    position: absolute;
-    clip: rect(0 0 0 0);
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-}
-
-/* Layout */
-
-/* Component */
 body {
-    background-image: url(img/logo.png);
-    background-repeat: no-repeat;
-    background-position: top;
+    background: url(img/logo.png) top center no-repeat;
     background-size: 386px 180px;
-    background-color: #EAE8FE;
+    background-color: #eae8fe;
 }
 
-.section-cola {
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
     width: fit-content;
-    margin: 247px auto 171px;
-    display: flex;
+    margin: 250px auto;
 }
 
 .section-machine {
-    background: #FFFFFF;
-    border: 2px solid #FFFFFF;
-    width: 364px;
+    background-color: #ffffff;
+    flex-grow: 1;
     height: 545px;
-    margin-right: 28px;
     box-sizing: border-box;
     padding: 31px 27px 28px;
 }
 
-.selling-list {
+.section-machine .beverage-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 12px;
 }
 
-.selling-list .selling-product {
+.section-machine .beverage-list li {
+    width: 94px;
+    height: 130px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    padding: 11px 11px 9px 13px;
+    border-radius: 10px;
+    text-align: center;
+    color: #333333;
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5));
+}
+
+.section-machine .beverage-list li:hover {
+    overflow: hidden;
+    outline: 3px solid #6327fe;
+}
+
+.beverage-list li .img-cola {
+    width: 36px;
+    height: 65px;
+    margin-bottom: 6px;
+    vertical-align: top;
+}
+
+.beverage-list li .btn-price {
+    background-color: #6327fe;
+    margin-top: 7px;
+    padding: 5px 16px 5px 15px;
+    border-radius: 50px;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+}
+
+.section-machine form {
+    display: grid;
+    grid-template-columns: 200px 94px;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.section-machine form .btn-balance {
+    background-color: #eae8fe;
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.section-machine form .btn-return-change,
+.section-machine form .btn-deposit {
+    background-color: #ffffff;
+    padding: 6px 0 7px;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 19px;
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5));
+}
+
+.section-machine form .input-deposit {
+    padding-left: 6px;
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+}
+
+.section-machine form .shopping-list,
+.section-basket .purchased-list {
+    background-color: #eae8fe;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 94px;
-    height: 130px;
-    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5));
-    border-radius: 10px;
-    background: #FFFFFF;
+    padding: 11px;
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
     box-sizing: border-box;
-    padding: 11px 11px 9px 13px;
+    overflow-y: scroll;
+}
+
+form .shopping-list {
+    height: 106px;
+}
+
+.section-basket .purchased-list {
+    height: 364px;
+    margin-top: 13px;
+}
+
+form .shopping-list::-webkit-scrollbar,
+.section-basket .purchased-list::-webkit-scrollbar {
+    width: 4px;
+    background-color: #eae8fe;
+}
+
+form .shopping-list::-webkit-scrollbar-thumb,
+.section-basket .purchased-list::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+    border-radius: 50px;
+}
+
+form .shopping-list li,
+.purchased-list li {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 6px 8px 7px 10px;
     color: #333333;
-}
-
-.selling-list .selling-product:hover {
-    border: 3px solid #6327FE;
-    border-radius: 10px;
-    box-sizing: border-box;
-}
-
-.cola-name {
     font-weight: 500;
     font-size: 9px;
     line-height: 13px;
 }
 
-.selling-product img {
-    width: 36px;
-    height: 65px;
+form .shopping-list li:not(:last-of-type),
+.purchased-list li:not(:last-of-type) {
     margin-bottom: 6px;
 }
 
-.selling-price {
-    width: 70px;
-    box-sizing: border-box;
-    padding: 5px 0;
-    text-align: center;
-    background-color: #6327FE;
-    border-radius: 50px;
-    font-weight: 500;
-    font-size: 12px;
-    color: #FFFFFF;
-    margin-top: 3px;
-}
-
-.selling-price::after {
-    content: '원';
-}
-
-.section-shopping {
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-}
-
-.type-1 {
-    width: 200px;
-    height: 106px;
-}
-
-.cola-price {
-    background-color: #EAE8FE;
-    width: 200px;
-    box-sizing: border-box;
-    padding: 6px 10px;
-    display: flex;
-    justify-content: space-between;
-    border-radius: 5px;
-}
-
-.cola-price p {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 20px;
-}
-
-.cola-price .cumulative-cola-price::after {
-    content: ' 원';
-}
-
-.cola-price, .btn-deposit, .enter-deposit, .btn-change {
-    height: 32px;
-}
-
-.btn-deposit, .btn-change {
-    background: #FFFFFF;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
-    border-radius: 5px;
-}
-
-.enter-deposit {
-    border: 1px solid #BDBDBD;
-    border-radius: 5px;
-    padding-left: 6px;
-}
-
-.btn-acquired {
-    background: #6327FE;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
-    border-radius: 5px;
-    color: #FFFFFF;
-    font-weight: 700;
-    font-size: 13px;
-    line-height: 19px;
-}
-
-.section-balance {
-    background-color: #FFFFFF;
-    width: 360px;
-    height: 50px;
-    box-sizing: border-box;
-    padding: 9px 27px;
-    border: 2px solid #FFFFFF;
-}
-
-.my-balance {
-    background-color: #EAE8FE;
-    height: 32px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    box-sizing: border-box;
-    padding: 6px 10px;
-    font-size: 14px;
-    line-height: 20px;
-    border-radius: 5px;
-}
-
-.my-balance h3 {
-    font-weight: 500;
-}
-
-.my-balance p {
-    font-weight: 700;
-}
-
-.my-balance p::after {
-    content: ' 원';
-}
-
-.section-purchased {
-    background-color: #FFFFFF;
-    width: 360px;
-    height: 474px;
-    margin-top: 20px;
-    box-sizing: border-box;
-    padding: 25px 27px 26px 27px;
-    text-align: center;
-}
-
-.section-purchased h3 {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 20px;
-}
-
-.shopping-list {
-    background-color: #EAE8FE;
-    box-sizing: border-box;
-    padding: 12px 18px 12px;
-    border: 1px solid #BDBDBD;
-    border-radius: 5px;
-    overflow-y: scroll;
-}
-
-.shopping-list::-webkit-scrollbar {
-    width: 4px;
-    border-radius: 50px;
-}
-
-.shopping-list::-webkit-scrollbar-thumb {
-    background: #FFFFFF;
-}
-
-.type-2 {
-    width: 306px;
-    height: 364px;
-    margin-top: 13px;
-}
-
-.shopping-list .cola-item {
-    background-color: #FFFFFF;
-    height: 46px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-sizing: border-box;
-    padding: 8px 8px 8px 10px;
-    border-radius: 5px;
-}
-
-.shopping-list .cola-item:not(:last-of-type) {
-    margin-bottom: 6px;
-}
-
-.shopping-list .cola-item img {
+li .img-sm-cola {
     width: 18px;
     height: 33px;
+    vertical-align: top;
 }
 
-.cola-count {
-    width: 30px;
-    height: 30px;
+li .cola-name {
+    width: 73px;
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 1;
+}
+
+.purchased-list li .cola-name {
+    margin-left: -105px;
+}
+
+li .count-cola {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 30px;
+    height: 30px;
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
-    border: 1px solid #BDBDBD;
+    border: 1px solid #bdbdbd;
     border-radius: 5px;
 }
 
-.total-price {
+.section-machine form .btn-acquired {
+    background-color: #6327fe;
+    border-radius: 5px;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 19px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+}
+
+.section-basket {
+    background-color: #eae8fe;
+}
+
+.section-basket .my-balance {
+    background-color: #ffffff;
+    padding: 9px 27px;
+}
+
+.section-basket .my-balance p {
+    background-color: #eae8fe;
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 10px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.section-basket .my-balance p span {
+    font-weight: 700;
+}
+
+.section-basket .my-beverage {
+    background-color: #ffffff;
+    height: 474px;
+    margin-top: 20px;
+    box-sizing: border-box;
+    padding: 25px 27px 26px;
+}
+
+.section-basket h3 {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.section-basket .total-price {
     margin-top: 6px;
+    text-align: right;
     font-weight: 500;
     font-size: 12px;
     line-height: 17px;
-    text-align: right;
-}
-
-.total-price::before {
-    content: '총금액 : ';
-}
-
-.total-price::after {
-    content: ' 원';
 }
