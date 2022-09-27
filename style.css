@@ -28,7 +28,8 @@ body {
     gap: 12px;
 }
 
-.section-machine .beverage-list li {
+.beverage-list .cola-item {
+    position: relative;
     width: 94px;
     height: 130px;
     box-sizing: border-box;
@@ -40,19 +41,35 @@ body {
     filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5));
 }
 
-.section-machine .beverage-list li:hover {
+.beverage-list .cola-item:hover {
     overflow: hidden;
     outline: 3px solid #6327fe;
 }
 
-.beverage-list li .img-cola {
+.beverage-list .soldout {
+    position: absolute;
+    top: 281px;
+    left: 232px;
+    width: 94px;
+    height: 130px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    background-image: url(img/Sold-out.png);
+    background-position: top 55% center;
+    background-size: 57.51px 44.85px;
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+
+.beverage-list .img-cola {
+    z-index: 1;
     width: 36px;
     height: 65px;
     margin-bottom: 6px;
     vertical-align: top;
 }
 
-.beverage-list li .btn-price {
+.beverage-list .btn-price {
     background-color: #6327fe;
     margin-top: 7px;
     padding: 5px 16px 5px 15px;
