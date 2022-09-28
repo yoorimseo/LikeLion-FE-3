@@ -4,19 +4,67 @@ p {
     padding: 0;
 }
 
+/* design */
 .error-message {
     position: relative;
     top: 0;
     left: 0;
+    margin: 150px auto;
     width: 348px;
-    height: 170px;
-    margin: 80px auto;
-    background: #ffffff;
-    border: 10px solid #000000;
-    border-radius: 20px;
-    box-sizing: border-box;
-    padding: 15px;
-    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    animation-duration: 0.3s;
+    animation-name: scale;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+.error-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    background: dodgerblue;
+    border-radius: 10px 10px 0 0;
+}
+
+.error-circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.error-circle.left {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ed6a5e;
+    margin: 0 4px 0 10px;
+}
+
+.error-circle.middle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #f6be4f;
+    margin-right: 4px;
+}
+
+.error-circle.right {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #62c554;
+}
+
+.error-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 130px;
+    border-radius: 0 0 10px 10px;
+    background-color: white;
 }
 
 .error-sign {
@@ -28,7 +76,7 @@ p {
     font-weight: 700;
     font-size: 36px;
     line-height: 1;
-    color: #f13f3f;
+    color: #000000;
 }
 
 .character {
@@ -49,6 +97,13 @@ p {
     background-image: url(img/front-hair.png);
     background-size: 340px 201px;
     z-index: 4;
+}
+
+.updown {
+    animation-duration: 0.8s;
+    animation-name: updown;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
 }
 
 .eyebrow {
@@ -82,22 +137,28 @@ p {
     border: 10px solid #ffffff;
     border-radius: 50%;
     z-index: 4;
+    animation-duration: 0.8s;
+    animation-name: blink;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    transform-origin: 40px 45px;
 }
 
 .eye.left {
     left: 85px;
 }
+
 .eye.right {
     right: 85px;
 }
 
 .darkcircle {
     position: absolute;
-    top: 198px;
-    width: 78px;
-    height: 81px;
+    top: 230px;
+    width: 81px;
+    height: 50px;
     background-color: #736396;
-    border-radius: 50%;
+    border-radius: 20px 20px 50px 50px;
     transform: rotate(-2.03deg);
     z-index: 3;
 }
@@ -115,10 +176,11 @@ p {
     top: 268px;
     left: 156px;
     width: 60px;
-    height: 25px;
+    height: 20px;
+    background-color: #f21a1a;
     box-sizing: border-box;
-    border: 10px solid #51271a;
-    border-radius: 50%;
+    border: 7px solid #51271a;
+    border-radius: 50% 50% 10px 10px;
     z-index: 3;
 }
 
@@ -126,14 +188,18 @@ p {
     position: absolute;
     top: 270px;
     left: 20px;
-    width: 134px;
-    height: 104px;
+    width: 114px;
+    height: 84px;
     background-image: url(img/air.png);
-    background-size: 134px 104px;
+    background-size: 114px 84px;
     z-index: 4;
+    animation-duration: 0.8s;
+    animation-name: air-bounce;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
 }
 
-.face {
+.skin {
     position: absolute;
     top: 33px;
     left: 22px;
@@ -232,12 +298,41 @@ p {
 }
 
 .desk {
-    position: relative;
-    top: -200px;
-    left: 600px;
+    position: absolute;
+    top: 350px;
+    left: -170px;
     width: 700px;
     height: 200px;
     border-radius: 20px;
     background-color: #51271a;
     z-index: -1;
+}
+
+/* animation */
+@keyframes scale {
+    to {
+        transform: scale(1.4);
+    }
+}
+
+@keyframes updown {
+    to {
+        transform: translateY(5px);
+    }
+}
+
+@keyframes blink {
+    to {
+        transform: scaleY(0.1);
+    }
+}
+
+@keyframes air-bounce {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        transform: translateY(10px);
+    }
 }
