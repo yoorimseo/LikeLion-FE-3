@@ -1,0 +1,10 @@
+$yurim: 10;
+
+@while $yurim > 1 {
+    $yurim: $yurim - 2;
+    .content-#{$yurim} {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+    }
+}

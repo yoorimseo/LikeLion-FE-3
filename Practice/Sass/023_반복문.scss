@@ -1,0 +1,8 @@
+// #{$변수명}
+
+@for $yurim from 1 through 3 {
+    .profile-#{$yurim} {
+        background-color: red;
+        font-size: #{$yurim * 10}px;
+    }
+}

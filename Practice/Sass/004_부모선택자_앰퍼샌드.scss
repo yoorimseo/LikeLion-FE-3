@@ -1,0 +1,19 @@
+.box {
+    &-yello {
+        background: yellow;
+    }
+
+    &-red {
+        background: red;
+    }
+}
+
+.btn {
+    &-submit {
+        background: yellow;
+    }
+
+    &-close {
+        background: red($color: #000000);
+    }
+}
