@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title></title>
+    </head>
+    <body>
+        <script>
+            console.log("hello");
+
+            let data = {
+                a: 10,
+                one: 1,
+                two: 2,
+                three: 3,
+                c: 100,
+                b: 3,
+            };
+            // 그냥 출력했을 때는 알파벳 순
+            console.dir(data);
+
+            // 순회를 돌았을 때는 알파벳순
+            // for (const d in data) {
+            //     console.log(data);
+            // }
+
+            let data2 = [10, 20, 30];
+            console.dir(data2);
+
+            // console.info("hello world");
+
+            // 데이터 계층 구조를 표현할 때 사용, 그룹이 두개이기 때문에 groupEnd도 두번
+            console.group("one");
+            console.log("유림/친구");
+            console.log("주호/친구");
+            console.group("two");
+            console.log("기범/친구");
+            console.log("성현/친구");
+            console.groupEnd();
+            console.log("end");
+            console.groupEnd();
+            console.log("end");
+
+            console.table(data);
+
+            console.error("error");
+            console.error("정신차렷");
+
+            console.warn("정신차렷");
+            console.warn("실행은 해줄게, 다만 경고문구는 읽어봐!");
+
+            // 콘솔창 텍스트 꾸미기
+            console.log("%chello world", "color:red;font-size:32px");
+        </script>
+    </body>
+</html>
