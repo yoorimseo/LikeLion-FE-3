@@ -1,6 +1,6 @@
 # Resume-Template
 
-멋쟁이사자처럼 프론트엔드스쿨 3기 천하제일 이력서 대회 출품작 ➔ [바로가기](https://yoorimseo.github.io/resume-template/)
+멋쟁이사자처럼 프론트엔드스쿨 3기 천하제일 이력서 대회 출품작 ➔ [바로가기](https://yoorimseo.github.io/resume-template/index.html)
 
 <br>
 <br>
