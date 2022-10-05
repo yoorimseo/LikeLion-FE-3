@@ -46,19 +46,22 @@ body {
     outline: 3px solid #6327fe;
 }
 
-.beverage-list .soldout {
+.beverage-list .soldout::after {
+    content: "품절";
+    color: transparent;
     position: absolute;
-    top: 281px;
-    left: 232px;
-    width: 94px;
-    height: 130px;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    top: 0;
     border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 80%;
+    background-color: black;
     background-image: url(img/Sold-out.png);
-    background-position: top 55% center;
-    background-size: 57.51px 44.85px;
     background-repeat: no-repeat;
-    z-index: 2;
+    background-size: contain;
+    background-position: center;
+    z-index: 1;
 }
 
 .beverage-list .img-cola {
