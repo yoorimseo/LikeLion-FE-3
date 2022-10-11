@@ -12,6 +12,7 @@
     let b = 5;
     return a * b;
 })();
+console.log("----------------------");
 
 // foo(); // ReferenceError: foo is not defined
 // * 어차피 실행하지 못해서 의미가 없다.
@@ -69,6 +70,7 @@ let data = [
     },
 ];
 
+// * 방법-1
 function 평균값구하기(data) {
     let sum = 0;
     for (student of data) {
@@ -77,13 +79,22 @@ function 평균값구하기(data) {
     return sum / data.length;
 }
 
+// * 방법-2
 function 평균값구하기2(data) {
-    let 중간고사점수 = data.map((n) => n.중간고사점수);
+    let 중간고사점수 = data.map((x) => n.중간고사점수);
     let 중간고사점수합 = 중간고사점수.resuce((a, b) => a + b);
 
     return 중간고사점수합 / data.length;
 }
 
+// * 방법-3
+function 평균값구하기(data) {
+    return (
+        data.map((x) => x.중간고사점수).reduce((a, b) => a + b) / data.length
+    );
+}
+
+// * 방법-4
 console.log(
     (function () {
         return (
@@ -93,16 +104,21 @@ console.log(
     })()
 );
 
+// * 방법-5
 let a = (data) =>
     data.map((x) => x.중간고사점수).reduce((a, b) => a + b) / data.length;
 console.log(a(data));
 
+// * 방법-6
 let b = (data) => {
     return (
         data.map((x) => x.중간고사점수).reduce((a, b) => a + b) / data.length
     );
 };
 console.log(b(data));
+console.log("----------------------");
+
+///////////////////////////////////
 
 // * 4. call by value, call by reference, sharing
 
@@ -110,10 +126,11 @@ console.log(b(data));
 // * call by value : 값의 전달
 // * call by reference : 참조-주소 값의 전달
 
-// ! 면접질문 : call by value와 call by reference에 대해 설명하시오.
-// ! 질문대답 : 자바스크립트는 call by value만 존재합니다.
+// ? 면접질문 : call by value와 call by reference에 대해 설명하시오.
+// ! 질문대답 : 자바스크립트는 call by value만 존재한다. 참조 타입을 넘기면 주소가 넘어가는 것이 아니라, 주소값을 복사한 복사본이 넘어간다.
 
-// * 방법 1)
+// * 방법 1) : test[0]의 값이 1000으로 변경된다.
+// ! 배열은 참조타입이라서 변경된다.
 let test = [10, 20, 30];
 
 function 함수3(a) {
@@ -122,7 +139,8 @@ function 함수3(a) {
 
 함수3(test);
 
-// * 방법 2)
+// * 방법 2) test[0]의 값이 1000으로 변경되지 않는다.
+// ! 넘버값은 원시타입(객체가 아니면서 메서드도 가지지 않는 데이터)이라서 변경이 안 된다.
 let test2 = 100;
 
 function 함수2(a) {
@@ -138,4 +156,23 @@ function test3(b) {
     b = 1000;
 }
 
-test3(a2);
+test3(a2); // * 1000이 아니라 {}가 출력된다.
+
+// * call by value : 아규먼트에 값이 넘어올 때 복사한 값이 넘어온다!
+// * call by reference : 아규먼트에 값이 넘어올 때 주소값이 넘어온다! (주소값이 넘어왔으니 접근을 하면 원본이다!)
+// ! javascript는 참조값을 넘길 때 참조한 주소값을 '복사'하여 넘깁니다. 그래서 call by reference가 아니라 call by value입니다. '복사한 값'인거죠. 주소값도 값이니까요.
+
+// ? 원시값보다 덩치가 큰 배열이나 객체도 인자로써 옮겨질 때 값이 복제되어 전달되면 실행시간이 길어질 수 도 있을까요?
+// ! 답 : 주소값을 복사하니 실행시간이 길어지지 않습니다.
+
+// ? 변수가 가리키고 있는 공간에 저장된 '값'이 전달된다...?
+// ! 답 : 주소값이 복사됩니다.
+
+// ? 지금 말씀하시는 부분이 원시값은 메모리에 값을 저장하고 object는 메모리에 참조주소를 저장해서 생기는 일 맞을까요?
+// ! 답 : 이해하신 것이 맞습니다. 다만 이렇게 표현하는 것이 정확할 것 같아요. 원시값은 파라미터에 복사한 값을 저장하고 참조타입은 파라미터에 참조 주소를 복사하여 저장합니다.
+
+// ? 함수 내부에서는 인자의 값을 가상 변수에 복제해서 로직을 수행하는데 참조값은 가상 변수에 주소값이 함께 담겨져서 값이 바뀌는 걸까요?
+// ! 답 : 맞습니다. 주소값이 담겨져서 바뀌는 것입니다. 다만 주소값이 '복사'된 상태입니다.
+
+// ? 메모리 주소를 복사해서 넘기기 때문에 새로운 주소가 할당된 경우에만 변경이 안된다는 거라고 이해해도 될까요?
+// ! 답 : 정확합니다.

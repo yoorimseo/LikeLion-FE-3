@@ -141,7 +141,7 @@ console.log("----------------------");
 
 ///////////////////////////////////////
 
-// * 3-4. 함수에서 객체를 아규먼트로
+// * 3-4. 함수에서 객체를 아규먼트로 전달하는 방법
 // https://www.freecodecamp.org/news/elegant-patterns-in-modern-javascript-roro-be01e7669cbd/
 
 // ! 개선할 여지가 있는 예시
@@ -152,7 +152,7 @@ function 함수4(회원등급, 글쓰기, 글읽기, 채널관리, 백업, 소�
     return;
 }
 
-// * 초깃값 설정
+// * 가독성이 떨어진다!
 함수4("Gold", true, true, true, "대화방 전체 백업 가능", true);
 
 // ! 올바른 예시
@@ -173,13 +173,71 @@ function 함수4({ 회원등급, 글쓰기, 글읽기, 채널관리, 백업, 소
     소셜로그인여부: true,
 });
 
-// * 입력되지 않은 값은 undefined가 뜬다.
+// * 입력되지 않은 값은 undefined 처리를 한다.
 함수4({
     회원등급: "Gold",
     채널관리: true,
     백업: "부분가능",
     소셜로그인여부: true,
 });
+console.log("----------------------");
+
+// * 초깃값 설정-1
+function 함수4({
+    회원등급 = "Gold",
+    글쓰기 = true,
+    글읽기 = true,
+    채널관리 = true,
+    백업 = "부분가능",
+    소셜로그인여부 = true,
+}) {
+    // * 회원등급 권한
+    console.log("함수기능");
+    console.log(회원등급, 글쓰기, 글읽기, 채널관리, 백업, 소셜로그인여부);
+
+    return;
+}
+
+함수4({
+    회원등급: "Silver",
+    소셜로그인여부: true,
+});
+console.log("----------------------");
+
+// * 초깃값 설정-2 : 아규먼트 없이 호출 가능
+// ! 정리 : { a = 1, b = 2 } 처럼 객체 리터럴에 초기값을 넣어도, 객체 리터럴 {}을 불러와야 함수가 실행이 되는데, 그것마저도 생략해준 것이 { a = 1,  b = 2} = {}
+function 함수4({ a = 2, b = 1, c = 3 } = {}) {
+    console.log(a, b, c);
+    return a + b + c;
+}
+console.log(함수4({ a: 20, b: 30, c: 10 }));
+console.log("----------------------");
+
+// ! 위 코드에 대한 설명
+// * 실행 O
+function 함수4(a = 10, b = 20, c = 30) {
+    return a + b + c;
+}
+함수4();
+
+// * 실행 X : 함수4()에서 함수4를 호출할 때, 아규먼트 값이 함수4로 값이 들어오지 않았기 때문이다. 즉, 할당을 하지 않고 선언만 한 것이다.
+function 함수4({ a = 10, b = 20, c = 30 }) {
+    return a + b + c;
+}
+함수4();
+
+// * 실행 O
+function 함수4({ a = 10, b = 20, c = 30 }) {
+    return a + b + c;
+}
+함수4({});
+// ! 즉, 함수4({}); 이렇게 실행하지 않아도 함수 호출이 가능하다! 바로 위의 코드를 축소한 것!
+
+// ! 참고 삼아서만 알아둘 것
+let { one = 1, two = 2 } = { one: 100 }; // * 객체가 매핑이 되지 않았기 때문에 그대로 초깃값 선언한 것이 실행되어 리턴된 것
+// ? {}와 같이 비어있는 값을 넣어준다(호출한다)는 의미 : 할당을 안 시켜서 객체의 값이 그대로 할당되도록 한다.
+let { one2 = 1, two2 = 2 } = {}; // * 매핑되는 값이 없기 때문에 one과 two의 값을 변화시키지 못한 것이다. 우항의 값을 대입하는 개념은 아니다.
+let { a1 = 10, b1 = 20, c1 = 30 } = undefined;
 
 ///////////////////////////////////////
 
@@ -205,15 +263,6 @@ function factorial(n) {
 }
 
 console.log(factorial(5));
-
-// * 2) 반복문
-let result = 1;
-for (let i = 1; i < 6; i++) {
-    result *= i;
-}
-
-console.log(result);
-
 /*
 5! = 5 * 4 * 3 * 2 * 1
 
@@ -224,6 +273,15 @@ factorial(3)    3       false       3 * factorial(2) = 6
 factorial(2)    2       false       2 * factorial(1) = 2
 factorial(1)    1       true        1
 */
+
+// * 2) 반복문
+let result = 1;
+for (let i = 1; i < 6; i++) {
+    result *= i;
+}
+
+console.log(result);
+console.log("----------------------");
 
 // * 예시2 - 누적합 구하기
 // ! 아래 코드들이 좋은 코드는 아니다.
@@ -253,17 +311,30 @@ console.log((누적합2 * (누적합2 + 1)) / 2);
 // * 예시3 - reverse
 // * 1) 재귀함수
 function reverse(txt) {
-    if (txt.length === 0) {
+    if (txt.length <= 0) {
         return txt;
     }
 
     return reverse(txt.slice(1)) + txt[0];
 }
 
-console.log(reverse("hello world"));
+console.log(reverse("hello"));
+
+/*
+참고사항
+'hello'.slice(1)
+'ello'
+
+n                   txt.length <= 1         return
+reverse('hello')    false                   reverse(txt.slice(1)) + 'h' = 'olleh'
+reverse('ello')     false                   reverse(txt.slice(1)) + 'e' = 'olle'               
+reverse('llo')      false                   reverse(txt.slice(1)) + 'l' = 'oll'            
+reverse('lo')       false                   reverse(txt.slice(1)) + 'l' = 'ol'                      
+reverse('o')        true                    'o'                      
+*/
 
 // * 2) 반복문
-let txt = "hello world";
+let txt = "hello";
 let result3 = "";
 
 for (const i of txt) {
@@ -271,6 +342,7 @@ for (const i of txt) {
 }
 
 console.log(result3);
+console.log("----------------------");
 
 ///////////////////////////////////////
 
@@ -291,6 +363,7 @@ function xplus() {
 
 xplus();
 console.log(x);
+console.log("----------------------");
 
 // * 8. 함수 안의 함수
 function a() {
@@ -300,6 +373,7 @@ function a() {
     }
     b();
 }
+console.log("----------------------");
 
 // * 9. 화살표 함수
 // * 예시 1)
