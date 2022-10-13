@@ -1206,6 +1206,34 @@ a();
         -   response.arrayBuffer() – ArrayBuffer(바이너리 데이터를 로우 레벨 형식으로 표현한 것) 형태 반환
 
 ```js
+// let 제목 = document.createElement('h2');
+// 제목.innerText = 'hello world';
+// document.childNodees[0].childNodees[1].append(제목);
+
+fetch("http://test.api.weniv.co.kr/mall")
+    .then((response) => response.json())
+    .then((json) => {
+        for (let item of json) {
+            let 제목 = document.createElement('h2')
+            제목.innerText = item.productName
+            // document.childNodes[0].childNodes[1].append(제목)
+            document.body.append(제목)
+
+            let 사진 = document.createElement('img')
+            // 'http://test.api.weniv.co.kr/' + item.thumbnailImg;
+            사진.setAttribute('src', 'http://test.api.weniv.co.kr/' + item.thumbnailImg)
+            사진.setAttribute('class', '이미지')
+            사진.setAttribute('alt', item.productName + ' 상품 이미지')
+            document.childNodes[0].childNodes[1].append(사진)
+
+            let 가격 = document.createElement('p')
+            가격.innerText = item.price
+            document.childNodes[0].childNodes[1].append(가격)
+        }
+    });
+
+-----------------------------------------------------
+
 fetch("https://jsonplaceholder.typicode.com/users/3")
     .then((response) => response.json())
     .then((json) => console.log(json));
