@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>JSON 데이터 가공</title>
+        <style>
+            table,
+            thead,
+            th,
+            tbody,
+            td {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+
+            table {
+                width: 100%;
+            }
+
+            th {
+                width: 15%;
+            }
+        </style>
+    </head>
+    <body>
+        <button onclick="renderTable(jsonData)">회원정보 로딩</button>
+        <button onclick="getAgeAverage(jsonData)">나이의 평균 계산</button>
+        <p>결과값 : <span id="age-average-res"></span></p>
+        <table id="infoTable">
+            <thead>
+                <th>id</th>
+                <th>age</th>
+                <th>eyeColor</th>
+                <th>name</th>
+                <th>gender</th>
+                <th>email</th>
+                <th>phone</th>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+        <script>
+            let jsonData = [
+                {
+                    _id: "5e80777f673acf89c007ff91",
+                    age: 27,
+                    eyeColor: "green",
+                    name: "Angelina Chang",
+                    gender: "female",
+                    email: "angelinachang@kangle.com",
+                    phone: "+1 (938) 477-2821",
+                },
+                {
+                    _id: "5e80777feee717674b817fd2",
+                    age: 25,
+                    eyeColor: "green",
+                    name: "Deidre Cobb",
+                    gender: "female",
+                    email: "deidrecobb@kangle.com",
+                    phone: "+1 (938) 477-2824",
+                },
+                {
+                    _id: "5e80777fac368a4578dda85d",
+                    age: 25,
+                    eyeColor: "blue",
+                    name: "Jolene Franks",
+                    gender: "female",
+                    email: "jolenefranks@kangle.com",
+                    phone: "+1 (985) 536-3981",
+                },
+                {
+                    _id: "5e80777ff3717874cbc78e44",
+                    age: 31,
+                    eyeColor: "brown",
+                    name: "Waters Hardin",
+                    gender: "male",
+                    email: "watershardin@kangle.com",
+                    phone: "+1 (938) 559-2224",
+                },
+                {
+                    _id: "5e80777fe36842ea9e024fcd",
+                    age: 34,
+                    eyeColor: "green",
+                    name: "Jody Chaney",
+                    gender: "female",
+                    email: "jodychaney@kangle.com",
+                    phone: "+1 (878) 587-2602",
+                },
+                {
+                    _id: "5e80777fafd591f57344eb33",
+                    age: 31,
+                    eyeColor: "green",
+                    name: "Ortiz Maldonado",
+                    gender: "male",
+                    email: "ortizmaldonado@kangle.com",
+                    phone: "+1 (986) 509-2753",
+                },
+                {
+                    _id: "5e80777f20e48e9ada226862",
+                    age: 25,
+                    eyeColor: "brown",
+                    name: "Stacy Burris",
+                    gender: "female",
+                    email: "stacyburris@kangle.com",
+                    phone: "+1 (864) 577-3500",
+                },
+                {
+                    _id: "5e80777faf334f84a2c90595",
+                    age: 33,
+                    eyeColor: "brown",
+                    name: "Davenport Levy",
+                    gender: "male",
+                    email: "davenportlevy@kangle.com",
+                    phone: "+1 (990) 600-2700",
+                },
+            ];
+
+            var click = true;
+
+            function getAgeAverage(jsonData) {
+                let result = 0;
+                if (click) {
+                    for (const i in jsonData) {
+                        result += jsonData[i].age;
+                    }
+                }
+                document.querySelector("#age-average-res").innerHTML =
+                    result / jsonData.length;
+            }
+
+            function renderTable(jsonData) {
+                let tableBodyData = [];
+
+                for (const data of jsonData) {
+                    tableBodyData.push(`
+                        <tr>
+                            <td>${data._id}</td>
+                            <td>${data.age}</td>
+                            <td>${data.eyeColor}</td>
+                            <td>${data.name}</td>
+                            <td>${data.gender}</td>
+                            <td>${data.email}</td>
+                            <td>${data.phone}</td>
+                        </tr>
+                    `);
+                }
+
+                document.querySelector("#tableBody").innerHTML =
+                    tableBodyData.join("");
+            }
+        </script>
+    </body>
+</html>
