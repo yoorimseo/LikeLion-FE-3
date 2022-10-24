@@ -1,32 +1,35 @@
 /* font */
 @font-face {
-    font-family: 'OTEnjoystoriesBA';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff') format('woff');
+    font-family: "OTEnjoystoriesBA";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff")
+        format("woff");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'GmarketSansBold';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-family: "GmarketSansBold";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff")
+        format("woff");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'GmarketSansMedium';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-family: "GmarketSansMedium";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+        format("woff");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Noto Sans KR';
+    font-family: "Noto Sans KR";
     font-style: normal;
     font-weight: 400;
-    src: url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2") format('woff2'),
-    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff") format('woff'),
-    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf") format('opentype');
+    src: url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2") format("woff2"),
+        url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff") format("woff"),
+        url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf") format("opentype");
 }
 
 /* Layouts */
@@ -44,9 +47,10 @@ header {
     margin-top: 120px;
 }
 
-main, footer {
+main,
+footer {
     text-align: center;
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 footer {
@@ -58,11 +62,12 @@ button {
     padding: 21px 49px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     border-radius: 56px;
-    color: #5B2386;
-    font-family: 'GmarketSansBold';
+    color: #5b2386;
+    font-family: "GmarketSansBold";
     font-size: 24px;
     line-height: 24px;
     border-style: none;
+    cursor: pointer;
 }
 
 .blind {
@@ -91,7 +96,6 @@ button {
 
 .img-txt {
     margin: 46px 0 78px 0;
-
 }
 
 /* main */
@@ -99,13 +103,13 @@ button {
     background-image: url(../img/quotes.png);
     background-repeat: no-repeat;
     background-position: center;
-    font-family: 'GmarketSansMedium';
+    font-family: "GmarketSansMedium";
     font-size: 18px;
     line-height: 30px;
 }
 
 .tit-desc {
-    font-family: 'GmarketSansBold';
+    font-family: "GmarketSansBold";
     font-size: 24px;
     line-height: 36px;
 }
@@ -117,10 +121,10 @@ button {
 .cont-inp input {
     width: 228px;
     height: 57px;
-    background: #FFFFFF;
+    background: #ffffff;
     border-radius: 7px;
     margin: 0 17px 0 17px;
-    font-family: 'GmarketSansBold';
+    font-family: "GmarketSansBold";
     font-size: 24px;
     line-height: 24px;
     text-align: center;
@@ -131,17 +135,17 @@ button {
 }
 
 .txt-wannabe {
-    font-family: 'GmarketSansMedium';
+    font-family: "GmarketSansMedium";
     font-size: 24px;
     line-height: 24px;
 }
 
 .txt-wannabe input::placeholder {
-    font-family: 'GmarketSansMedium';
+    font-family: "GmarketSansMedium";
     font-size: 24px;
     line-height: 24px;
     text-align: center;
-    color: #BABCBE;
+    color: #babcbe;
 }
 
 .txt-wannabe:nth-child(2) {
@@ -155,8 +159,8 @@ button {
 }
 
 .btn-exc {
-    margin-top: 115px ;
-    background: #FCEE21;
+    margin-top: 115px;
+    background: #fcee21;
 }
 
 .img-click {
@@ -174,7 +178,7 @@ button {
 }
 
 .txt-wannabe strong {
-    font-family: 'GmarketSansBold';
+    font-family: "GmarketSansBold";
     font-size: 72px;
     line-height: 72px;
     margin: 0 12px 0 12px;
@@ -182,11 +186,11 @@ button {
 }
 
 .btn-go {
-    background: #FCEE21;
+    background: #fcee21;
 }
 
 .btn-share {
-    background: #FFFFFF;
+    background: #ffffff;
     margin-left: 18px;
 }
 
@@ -195,7 +199,7 @@ button {
     margin-bottom: 20px;
 }
 .txt-footer {
-    font-family: 'GmarketSansMedium';
+    font-family: "GmarketSansMedium";
     font-size: 12px;
     line-height: 17px;
 }
@@ -204,7 +208,7 @@ button {
 .cont-modal {
     width: 800px;
     height: 800px;
-    background: #FFFFFF;
+    background: #ffffff;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
     border-radius: 30px;
     text-align: center;
