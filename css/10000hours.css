@@ -156,6 +156,7 @@ button {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-bottom: 70px;
 }
 
 .btn-exc {
@@ -170,6 +171,7 @@ button {
 }
 
 .cont-result {
+    display: none;
     margin-bottom: 130px;
 }
 
