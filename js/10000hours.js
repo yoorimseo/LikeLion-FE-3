@@ -36,11 +36,16 @@ function showRes() {
     txtResTraningTime.textContent = `${resDay}`;
 }
 
-const btnOpenModal = document.querySelector(".btn-go");
+const btnOpenModal = document.querySelector("#btn-open-modal");
+const btnCloseModal = document.querySelector("#btn-close-modal");
 const contModal = document.querySelector(".cont-modal");
 
+// * '훈련하러 가기 GO! GO!' 버튼을 클릭하면 모달창이 뜬다.
 btnOpenModal.addEventListener("click", () => {
     contModal.style.display = "block";
 });
-// * '훈련하러 가기 GO! GO!' 버튼을 클릭하면 모달창이 뜬다.
+
 // * '종료하고 진짜 훈련하러 가기 GO! GO!' 버튼을 클릭하면 모달창을 닫는다.
+btnCloseModal.addEventListener("click", () => {
+    contModal.style.display = "none";
+});
