@@ -43,10 +43,12 @@
 
                 frag.appendChild(article);
             }
+            // 메서드를 호출한 노드를 복제해서 반환합니다.
+            parentEl.appendChild(frag.cloneNode(true));
+            //parentEl.appendChild(frag);
 
-            parentEl.appendChild(frag);
-
-            frag.appendChild(document.createElement("div"));
+            // frag 객체는 사용 후에도 사라지지않습니다.
+            //frag.appendChild(document.createElement('div'));
         </script>
     </body>
 </html>
