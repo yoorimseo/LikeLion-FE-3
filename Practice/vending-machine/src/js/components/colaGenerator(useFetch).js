@@ -3,11 +3,11 @@ class ColaGenerator {
   // 그렇다고 XML만 오갈수 있는게 아니라 JSON같은 다른 파일 포멧도 가능
   // XMLHttpRequest 생성자가 Ajax 통신을 할 때 필요한 인스턴스를 제공해주고 그 인스턴스를 활용해서 통신하는게 Ajax
   constructor() {
-    this.itemList = document.querySelector(".list-item");
+    this.itemList = document.querySelector('.list-item');
   }
 
-  setup() {
-    this.loadData((json) => {
+  async setup() {
+    await this.loadData((json) => {
       this.colaFactory(json);
     });
   }
@@ -15,13 +15,13 @@ class ColaGenerator {
   async loadData(callback) {
     // aysnchronous javascript ans xml
     // javascript object notation
-    const response = await fetch("src/js/item.json");
+    const response = await fetch('src/js/item.json');
 
     if (response.ok) {
       // .ok : http 프로토콜로 받는 상태 코드가 200 ~ 299일 경우를 의미
       callback(await response.json()); // 응답 본문을 읽으면서 객체 형태로 파싱한다.
     } else {
-      alert("통신 에러!" + response.status);
+      alert('통신 에러!' + response.status);
     }
   }
 
@@ -40,7 +40,7 @@ class ColaGenerator {
 
     // 데이터를 순회하면서 li 요소로 만든다.
     data.forEach((el) => {
-      const item = document.createElement("li");
+      const item = document.createElement('li');
       const itemTemplate = `
         <button type="button" class="btn-item" data-item="${el.name}" data-count="${el.count}" data-price="${el.cost}" data-img="${el.img}">
           <img src="src/images/${el.img}" alt="" class="img-item">
