@@ -77,9 +77,41 @@ const result = arr.reduce((a, c) => (a += c));
 // 배열 만들기
 Array(10).fill(0);
 [...Array(10)].map((_, i) => i + 1);
-".".repeat(10).split("."); // 권장하지 않습니다.
-".".repeat(9).split(".");
-Array.from("ab".repeat(10));
+'.'.repeat(10).split('.'); // 권장하지 않습니다.
+'.'.repeat(9).split('.');
+Array.from('ab'.repeat(10));
+
+// 문자열 중 숫자만 뽑아내서 더하기
+'abde15283abced'.split('');
+// (14) ['a', 'b', 'd', 'e', '1', '5', '2', '8', '3', 'a', 'b', 'c', 'e', 'd']
+Array.from('abde15283abced');
+// (14) ['a', 'b', 'd', 'e', '1', '5', '2', '8', '3', 'a', 'b', 'c', 'e', 'd']
+'abde15283abced'.split('').filter((v) => +v);
+// (5) ['1', '5', '2', '8', '3']
+'abde15283abced'
+  .split('')
+  .filter((v) => +v)
+  .map((v) => parseInt(v));
+// (5) [1, 5, 2, 8, 3]
+'abde15283abced'
+  .split('')
+  .filter((v) => +v)
+  .map((v) => parseInt(v))
+  .reduce((a, c) => a + c);
+// 19
+
+// 숫자 영어를 숫자로 변환해서 출력하기
+'onetwothreefour'.match(/(one|two|three|four)/g);
+// (4) ['one', 'two', 'three', 'four']
+let s = { one: 1, two: 2, three: 3, four: 4 };
+let ss = 'onetwothreefour'.match(/(one|two|three|four)/g);
+for (i of ss) {
+  console.log(s[i]);
+}
+// 1
+// 2
+// 3
+// 4
 ```
 
 - 활용할 수 있는 커스텀 메서드
@@ -87,7 +119,7 @@ Array.from("ab".repeat(10));
 ```js
 const zip = (a, b) => a.map((v, i) => [v, b[i]]);
 // zip('hello', [10, 20, 30, 40, 50]) // error
-zip([10, 20, 30, 40, 50], "hello"); // 성공
+zip([10, 20, 30, 40, 50], 'hello'); // 성공
 // (2) [10, 'h']
 // (2) [20, 'e']
 // (2) [30, 'l']
@@ -249,13 +281,13 @@ zip([10, 20, 30, 40, 50], "hello"); // 성공
   for (let i = 0; i < arr.length; i++) {
     console.log(arr[i]);
     console.log(arr[i + 1]);
-    console.log("----------");
+    console.log('----------');
   }
 
   for (let i = 0; i < arr.length - 1; i++) {
     console.log(arr[i]);
     console.log(arr[i + 1]);
-    console.log("----------");
+    console.log('----------');
   }
 
   for (let i = 0; i < arr.length - 1; i++) {
@@ -542,7 +574,7 @@ class Node {
 
 class LinkedList {
   constructor() {
-    let init = new Node("init");
+    let init = new Node('init');
     this.head = init;
     this.tail = init;
   }
@@ -607,7 +639,7 @@ class Node {
 
 class LinkedList {
   constructor() {
-    let init = new Node("init");
+    let init = new Node('init');
     this.head = init;
     this.tail = init;
     this.length = 0;
@@ -648,11 +680,11 @@ class Node {
 
 class LinkedList {
   constructor() {
-    let init = new Node("init");
+    let init = new Node('init');
     this.head = init;
     this.tail = init;
     this.length = 0;
-    this.displayData = "";
+    this.displayData = '';
   }
 
   // length() { //this.length가 덮어 씀
@@ -660,7 +692,7 @@ class LinkedList {
   // }
 
   toString() {
-    return "<" + this.displayData.slice(0, -2) + ">";
+    return '<' + this.displayData.slice(0, -2) + '>';
   }
 
   append(data) {
@@ -695,11 +727,11 @@ class Node {
 
 class LinkedList {
   constructor() {
-    let init = new Node("init");
+    let init = new Node('init');
     this.head = init;
     this.tail = init;
     this.length = 0;
-    this.displayData = "";
+    this.displayData = '';
     this.displayDataArr = [];
   }
 
@@ -708,7 +740,7 @@ class LinkedList {
   // }
 
   toString() {
-    return "<" + this.displayData.slice(0, -2) + ">";
+    return '<' + this.displayData.slice(0, -2) + '>';
   }
 
   toArray() {
@@ -748,7 +780,7 @@ class Node {
 
 class LinkedList {
   constructor() {
-    let init = new Node("init");
+    let init = new Node('init');
     this.head = init;
     this.tail = init;
     this.length = 0;
@@ -764,7 +796,7 @@ class LinkedList {
     //처음 순회용 현재 노드가 init이기 때문에
     순회용현재노드 = 순회용현재노드.next;
 
-    let 출력데이터 = "";
+    let 출력데이터 = '';
     for (let i = 0; i < this.length; i++) {
       출력데이터 += `${순회용현재노드.data}, `;
       순회용현재노드 = 순회용현재노드.next;
@@ -804,7 +836,7 @@ class Node {
 
 class LinkedList {
   constructor() {
-    let init = new Node("init");
+    let init = new Node('init');
     this.head = init;
     this.tail = init;
     this.length = 0;
@@ -820,14 +852,14 @@ class LinkedList {
     //처음 순회용 현재 노드가 init이기 때문에
     순회용현재노드 = 순회용현재노드.next;
 
-    let 출력데이터 = "";
+    let 출력데이터 = '';
     for (let i = 0; i < this.length; i++) {
       출력데이터 += `${순회용현재노드.data}, `;
       순회용현재노드 = 순회용현재노드.next;
     }
 
     // return 출력데이터;
-    return "[" + 출력데이터.slice(0, -2) + "]";
+    return '[' + 출력데이터.slice(0, -2) + ']';
   }
 
   fullData() {
@@ -865,7 +897,7 @@ class Node {
 
 class LinkedList {
   constructor() {
-    let init = new Node("init");
+    let init = new Node('init');
     this.head = init;
     this.tail = init;
     this.length = 0;
@@ -881,14 +913,14 @@ class LinkedList {
     //처음 순회용 현재 노드가 init이기 때문에
     순회용현재노드 = 순회용현재노드.next;
 
-    let 출력데이터 = "";
+    let 출력데이터 = '';
     for (let i = 0; i < this.length; i++) {
       출력데이터 += `${순회용현재노드.data}, `;
       순회용현재노드 = 순회용현재노드.next;
     }
 
     // return 출력데이터;
-    return "[" + 출력데이터.slice(0, -2) + "]";
+    return '[' + 출력데이터.slice(0, -2) + ']';
   }
 
   fullData() {
@@ -969,7 +1001,7 @@ class Node {
 
 class DoubleLinkedList {
   constructor() {
-    let init = new Node("init");
+    let init = new Node('init');
     this.head = init;
     this.tail = init;
   }
@@ -1865,22 +1897,22 @@ function 퀵정렬(입력배열) {
 ```js
 // 캐시크기 3 - 총 27
 // 바나나, 체리, 한라봉, 체리, a, b
-["Jeju", "Pangyo", "Seoul", "NewYork", "LA", "Seoul", "LA"][("Jeju", "", "")][("Jeju", "Pangyo", "Seoul", "NewYork", "LA", "Seoul", "LA")][ //5
-  ("Jeju", "Pangyo", "")
-][("Jeju", "Pangyo", "Seoul", "NewYork", "LA", "Seoul", "LA")][("Jeju", "Pangyo", "Seoul")][("Jeju", "Pangyo", "Seoul", "NewYork", "LA", "Seoul", "LA")][ //5 //5
-  ("Pangyo", "Seoul", "NewYork")
-][("Jeju", "Pangyo", "Seoul", "NewYork", "LA", "Seoul", "LA")][("Seoul", "NewYork", "LA")][("Jeju", "Pangyo", "Seoul", "NewYork", "LA", "Seoul", "LA")][ //5 //5
-  ("NewYork", "LA", "Seoul")
-][("Jeju", "Pangyo", "Seoul", "NewYork", "LA", "Seoul", "LA")][("NewYork", "Seoul", "LA")][ //1 //1
+['Jeju', 'Pangyo', 'Seoul', 'NewYork', 'LA', 'Seoul', 'LA'][('Jeju', '', '')][('Jeju', 'Pangyo', 'Seoul', 'NewYork', 'LA', 'Seoul', 'LA')][ //5
+  ('Jeju', 'Pangyo', '')
+][('Jeju', 'Pangyo', 'Seoul', 'NewYork', 'LA', 'Seoul', 'LA')][('Jeju', 'Pangyo', 'Seoul')][('Jeju', 'Pangyo', 'Seoul', 'NewYork', 'LA', 'Seoul', 'LA')][ //5 //5
+  ('Pangyo', 'Seoul', 'NewYork')
+][('Jeju', 'Pangyo', 'Seoul', 'NewYork', 'LA', 'Seoul', 'LA')][('Seoul', 'NewYork', 'LA')][('Jeju', 'Pangyo', 'Seoul', 'NewYork', 'LA', 'Seoul', 'LA')][ //5 //5
+  ('NewYork', 'LA', 'Seoul')
+][('Jeju', 'Pangyo', 'Seoul', 'NewYork', 'LA', 'Seoul', 'LA')][('NewYork', 'Seoul', 'LA')][ //1 //1
   // LRU
   // hit - 1
   // miss - 5
-  ("바나나", "체리", "한라봉", "자몽", "수박", "수박", "체리")
+  ('바나나', '체리', '한라봉', '자몽', '수박', '수박', '체리')
 ][바나나][(바나나, 체리)][(바나나, 체리, 한라봉)][(체리, 한라봉, 자몽)][(한라봉, 자몽, 수박)][(한라봉, 자몽, 수박)][(자몽, 수박, 체리)][바나나][(바나나, 체리)][ // 5 // 5 // 5 // 5 // 5 // 1 - hit // 5 // 5 // 5
   (바나나, 체리, 한라봉)
 ][(바나나, 한라봉, 체리)][(한라봉, 체리, a)][(체리, a, b)][ // 5 // 1 // 5 // 5
   // FIFO 알고리즘(캐시:3)
-  ("바나나", "체리", "한라봉", "자몽", "수박", "수박", "체리")
+  ('바나나', '체리', '한라봉', '자몽', '수박', '수박', '체리')
 ][바나나][(바나나, 체리)][(바나나, 체리, 한라봉)][(체리, 한라봉, 자몽)][(한라봉, 자몽, 수박)][(한라봉, 자몽, 수박)][(자몽, 수박, 체리)]; // 5 // 5 // 5 // 5 // 5 // 1 - hit // 5
 ```
 
@@ -2022,9 +2054,9 @@ x.toString(2).replace(/1/g, '#').replace(/0/g, ' ')
 
   ```js
   testcase = [
-    "1S2D*3T", // 37
-    "1D2S#10S", // 9
-    "1D2S0T", // 3
+    '1S2D*3T', // 37
+    '1D2S#10S', // 9
+    '1D2S0T', // 3
   ];
 
   function solution(dartResult) {
@@ -2035,11 +2067,11 @@ x.toString(2).replace(/1/g, '#').replace(/0/g, ' ')
     for (let i = 0; i < dartResult.length; i++) {
       if (dartResult[i] >= 0 && dartResult[i] <= 9) {
         temp = parseInt(dartResult[i]); // 이렇게 하게 되면 10점을 고려하지 않은 것!
-      } else if (dartResult[i] == "S") {
+      } else if (dartResult[i] == 'S') {
         answer.push(temp);
-      } else if (dartResult[i] == "D") {
+      } else if (dartResult[i] == 'D') {
         answer.push(temp ** 2);
-      } else if (dartResult[i] == "T") {
+      } else if (dartResult[i] == 'T') {
         answer.push(temp ** 3);
       }
     }
@@ -2061,7 +2093,7 @@ x.toString(2).replace(/1/g, '#').replace(/0/g, ' ')
     return answer.reduce((a, c) => a + c);
   }
 
-  console.log(solution("1S2D3T"));
+  console.log(solution('1S2D3T'));
   ```
 
   - step 2
@@ -2081,16 +2113,16 @@ x.toString(2).replace(/1/g, '#').replace(/0/g, ' ')
         } else {
           temp = parseInt(dartResult[i]);
         }
-      } else if (dartResult[i] == "S") {
+      } else if (dartResult[i] == 'S') {
         answer.push(temp);
-      } else if (dartResult[i] == "D") {
+      } else if (dartResult[i] == 'D') {
         answer.push(temp ** 2);
-      } else if (dartResult[i] == "T") {
+      } else if (dartResult[i] == 'T') {
         answer.push(temp ** 3);
-      } else if (dartResult[i] == "*") {
+      } else if (dartResult[i] == '*') {
         answer[answer.length - 1] *= 2;
         answer[answer.length - 2] *= 2;
-      } else if (dartResult[i] == "#") {
+      } else if (dartResult[i] == '#') {
         answer[answer.length - 1] *= -1;
       }
     }
@@ -2114,9 +2146,9 @@ x.toString(2).replace(/1/g, '#').replace(/0/g, ' ')
 // 2	["Jeju", "Pangyo", "Seoul", "NewYork", "LA", "SanFrancisco", "Seoul", "Rome", "Paris", "Jeju", "NewYork", "Rome"]	60
 
 testcase = [
-  [3, ["Jeju", "Pangyo", "Seoul", "NewYork", "LA", "Jeju", "Pangyo", "Seoul", "NewYork", "LA"]],
-  [3, ["Jeju", "Pangyo", "Seoul", "Jeju", "Pangyo", "Seoul", "Jeju", "Pangyo", "Seoul"]],
-  [2, ["Jeju", "Pangyo", "Seoul", "NewYork", "LA", "SanFrancisco", "Seoul", "Rome", "Paris", "Jeju", "NewYork", "Rome"]],
+  [3, ['Jeju', 'Pangyo', 'Seoul', 'NewYork', 'LA', 'Jeju', 'Pangyo', 'Seoul', 'NewYork', 'LA']],
+  [3, ['Jeju', 'Pangyo', 'Seoul', 'Jeju', 'Pangyo', 'Seoul', 'Jeju', 'Pangyo', 'Seoul']],
+  [2, ['Jeju', 'Pangyo', 'Seoul', 'NewYork', 'LA', 'SanFrancisco', 'Seoul', 'Rome', 'Paris', 'Jeju', 'NewYork', 'Rome']],
 ];
 
 for (const [cacheSize, cities] of testcase) {
@@ -2155,27 +2187,27 @@ function solution(cacheSize, cities) {
 - 입력레코드
 
 ```js
-["Enter uid1234 Muzi", "Enter uid4567 Prodo", "Leave uid1234", "Enter uid1234 Prodo", "Change uid4567 Ryan"];
+['Enter uid1234 Muzi', 'Enter uid4567 Prodo', 'Leave uid1234', 'Enter uid1234 Prodo', 'Change uid4567 Ryan'];
 ```
 
 - 풀이를 위한 기본 문법
 
 ```js
-let test = ["A 10 !", "B 20 !", "A 22", "B 20 @", "A 21 @"];
+let test = ['A 10 !', 'B 20 !', 'A 22', 'B 20 @', 'A 21 @'];
 
 test.forEach((s) => console.log(s));
 
 test.forEach((s) => {
   console.log(s);
-  console.log(s.split(" "));
-  console.log("---------");
+  console.log(s.split(' '));
+  console.log('---------');
 });
 
 test.forEach((s) => {
   console.log(s);
-  const [a, b, c] = s.split(" ");
+  const [a, b, c] = s.split(' ');
   console.log(a, b, c);
-  console.log("---------");
+  console.log('---------');
 });
 ```
 
