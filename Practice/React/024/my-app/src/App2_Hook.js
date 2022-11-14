@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 function Resume({ 이름, 취미, 자기소개 }) {
   // 예시) 클릭 이벤트가 일어날 때마다 좋아요 숫자가 바뀌는 것, 데이터가 바뀔 때마다 바뀐 데이터를 보여주는 것
-  // const [랜더링이 필요한 변수, 변수의 상태를 변경할 set변수] = useState(초기값);
+  // const [랜더링이 필요한 변수, 랜더링이 필요한 변수를 바꿀 수 있도록 도와주는 함수] = useState(초기값);
   const [like, setLike] = useState(0);
 
   function handleClickLike() {
