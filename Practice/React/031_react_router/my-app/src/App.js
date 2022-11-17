@@ -1,66 +1,40 @@
-import { BrowserRouter, Routes, Route, Link, useLocation, Outlet } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link, useLocation, useParams, Outlet } from 'react-router-dom';
+
+function Home() {
+  return <h1>Home</h1>;
+}
+
+function A() {
+  return <h2>A</h2>;
+}
+
+function B() {
+  return <h2>B</h2>;
+}
+
+function C() {
+  const { num } = useParams();
+  return <h2>c {num}</h2>;
+}
 
 function App() {
   return (
     <BrowserRouter>
-      <Link to='/'> home </Link>
-      <Link to='/one'> one </Link>
-      <Link to='/two'> two </Link>
-      <Link to='/three'> three </Link>
-      {/* 라우트를 감싸줍니다. */}
+      <Link to='/'>Home</Link>
+      <br />
+      <Link to='/a'>A</Link>
+      <br />
+      <Link to='/b'>B</Link>
+      <br />
+      <Link to='/c'>C</Link>
       <Routes>
-        <Route path='/' element={<Index />} />
-        <Route path='/one' element={<One name='licat' />} />
-        <Route path='/two' element={<Two />} />
-        <Route path='/three/*' element={<Outlet />}>
-          <Route path='' element={<HojunIndex />} />
-          <Route path='hojunone/' element={<HojunOne />} />
-          <Route path='hojuntwo/' element={<HojunTwo />} />
-        </Route>
-        <Route path='/blog/:id' element={<Blog />} />
+        <Route path='/' element={<Home />}></Route>
+        <Route path='/a' element={<A />}></Route>
+        <Route path='/b' element={<B />}></Route>
+        <Route path='/c/:num' element={<C />}></Route>
       </Routes>
     </BrowserRouter>
   );
-}
-
-function Index() {
-  return <h1>hello world0</h1>;
-}
-
-function One({ name }) {
-  return <h1>{name} world1</h1>;
-}
-
-function Two() {
-  return <h1>hello world2</h1>;
-}
-
-function Three() {
-  return <h1>hello world3</h1>;
-}
-
-function Blog() {
-  const location = useLocation();
-  console.log(location);
-  return <h1>hello Blog</h1>;
-}
-
-function HojunIndex() {
-  const location = useLocation();
-  console.log(location);
-  return <h1>hello Hojun index</h1>;
-}
-
-function HojunOne() {
-  const location = useLocation();
-  console.log(location);
-  return <h1>hello Hojun 1</h1>;
-}
-
-function HojunTwo() {
-  const location = useLocation();
-  console.log(location);
-  return <h1>hello Hojun 2</h1>;
 }
 
 export default App;
