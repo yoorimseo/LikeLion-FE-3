@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+
+<body>
+  <script>
+    // 2. 엄격모드(strict mode)로 사용하기
+    ('use strict');
+
+    str = 'hello strict';
+
+    // 3. 읽기 전용 객체에 값을 할당하면 에러가 발생한다.
+    // (일반 모드에서는 조용한 에러 —> 무시 처리)
+    // 엄격모드(strict mode)에서는 바로 에러가 발생한다.
+    var undefined = 'undefined';
+    var Infinity = 100;
+    Math.PI = 0;
+
+    // 4. 지울수 없는 값을 지우려고 하면 에러가 발생합니다.
+    const employee = {
+      firstname: 'John',
+      lastname: 'Doe'
+    };
+
+    console.log(employee.firstname); // John
+
+    delete employee.firstname;
+    console.log(employee.firstname); // undefined
+
+    delete Object.prototype; // 일반 모드에서는 조용한 에러 —> 무시 처리
+
+    // 5. 함수 파라메터에 중복된 이름을 사용할 수 없다.
+    function myFunc(a, a, b) {
+      console.log(a + a + b);
+    }
+
+    console.log(myFunc(1, 2, 3)); // 7, a의 값이 나중에 들어온 2 값으로 할당이 된 것과 같은 결과가 나온다.
+
+  </script>
+</body>
+
+</html>
