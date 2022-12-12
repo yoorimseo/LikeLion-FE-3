@@ -1,12 +1,13 @@
-import styles from './Home.module.css';
 import DiaryForm from './DiaryForm';
-import DiaryList from './DiaryList';
+import styles from './Home.module.css';
 import { useAuthContext } from '../../hooks/useAuthContext';
 import { useCollection } from '../../hooks/useCollection';
+import DiaryList from './DiaryList';
 
 export default function Home() {
   const { user } = useAuthContext();
-  const { documents, error } = useCollection('myDiary');
+  // 쿼리 사용을 위해 useCollection에 인자를 추가합니다.
+  const { documents, error } = useCollection('diary', ['uid', '==', user.uid]);
 
   return (
     <main className={styles.cont}>
