@@ -1,0 +1,260 @@
+@import url(reset.css);
+
+/* login */
+.txt-hide {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+.section-login {
+    width: 440px;
+    margin: 280px auto;
+    padding: 30px;
+    background: #ffffff;
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.section-login .img-logo {
+    width: 122px;
+    height: 24px;
+}
+
+.section-login .txt-login {
+    margin-top: 28px;
+    line-height: 20px;
+}
+
+.section-login .btn-login {
+    background: #2f80ed;
+    margin-top: 32px;
+    padding: 17px 189px 15px 190px;
+    border-radius: 5px;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 28px;
+}
+
+/* modal */
+.section-modal {
+    background: #ffffff;
+    width: 472px;
+    margin: 280px auto;
+    border: 1px solid #c4c4c4;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.section-modal .modal-header {
+    display: flex;
+    justify-content: right;
+    padding: 20px 24px 18px 0;
+    border-bottom: 1px solid #c4c4c4;
+}
+
+.modal-header .modal-title {
+    width: fit-content;
+    margin: 0 auto;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.modal-header .btn-close {
+    background-color: #ffffff;
+    width: 16px;
+    height: 16px;
+    background-image: url(img/close.png);
+    background-size: contain;
+}
+
+.section-modal .modal-main {
+    padding: 26px 24px 24px 23px;
+}
+
+.modal-main .txt-info {
+    margin-bottom: 24px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: left;
+}
+
+.modal-main .input-id,
+.modal-main .input-pw {
+    width: 96%;
+    padding: 15px 0 15px 16px;
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.modal-main .input-pw {
+    margin-top: 10px;
+}
+
+.modal-main .input-id::placeholder,
+.modal-main .input-pw::placeholder {
+    color: #767676;
+}
+
+.modal-main .check-status {
+    margin: 16px 0 20px;
+    text-align: left;
+}
+
+.check-status .label-status {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #767676;
+}
+
+.check-status .label-status::before {
+    content: " ";
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background-image: url(img/check-box-off.png);
+    background-size: contain;
+    vertical-align: -5px;
+    margin-inline-end: 8px;
+}
+
+.input-status:checked + .label-status::before {
+    background: url(img/check-box-on.png);
+    background-size: contain;
+}
+
+.input-status:focus + .label-status::before {
+    outline: 2px solid #000;
+    outline-offset: 5px;
+    border-radius: 50%;
+}
+
+.modal-main .link-login {
+    background: #2f80ed;
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 14px 0;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.modal-main .link-join,
+.modal-main .link-find,
+.modal-main .separation-line {
+    font-size: 14px;
+    line-height: 18px;
+    color: #767676;
+}
+
+.modal-main .link-join::after {
+    content: "|";
+    margin-inline-start: 12px;
+    margin-inline-end: 12px;
+}
+
+.modal-main .separation-line {
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;
+    margin: 31px 0 19px;
+}
+
+.modal-main .separation-line::before,
+.modal-main .separation-line::after {
+    content: " ";
+    flex-grow: 1;
+    height: 1px;
+    background: #c4c4c4;
+}
+
+.modal-main .separation-line::before {
+    margin-right: 13px;
+}
+
+.modal-main .separation-line::after {
+    margin-left: 13px;
+}
+
+.login-methods li {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    padding: 11px 0 11px 12px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+.login-methods li:not(:last-of-type) {
+    margin-bottom: 10px;
+}
+
+.login-methods .google-account {
+    border: 1px solid #767676;
+}
+
+.login-methods .google-account::before {
+    content: " ";
+    width: 28px;
+    height: 28px;
+    background-image: url(img/google-logo.png);
+    background-size: contain;
+}
+
+.login-methods .facebook-account {
+    border: 1px solid #2d9cdb;
+}
+
+.login-methods .facebook-account::before {
+    content: " ";
+    width: 28px;
+    height: 28px;
+    background-image: url(img/facebook-logo.png);
+    background-size: contain;
+}
+
+.login-methods .naver-account {
+    border: 1px solid #00bf18;
+}
+
+.login-methods .naver-account::before {
+    content: " ";
+    width: 28px;
+    height: 28px;
+    background-image: url(img/naver-logo.png);
+    background-size: contain;
+}
+
+.login-methods .kakao-account {
+    border: 1px solid #f2c94c;
+}
+
+.login-methods .kakao-account::before {
+    content: " ";
+    width: 28px;
+    height: 28px;
+    background-image: url(img/kakao-logo.png);
+    background-size: contain;
+}
+
+.login-methods li a {
+    width: fit-content;
+    margin: 0 auto;
+    color: #767676;
+    font-weight: 500;
+    line-height: 20px;
+}
