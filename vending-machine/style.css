@@ -1,0 +1,260 @@
+@import url(reset.css);
+
+body {
+    background: url(img/logo.png) top center no-repeat;
+    background-size: 386px 180px;
+    background-color: #eae8fe;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    width: fit-content;
+    margin: 250px auto;
+}
+
+.section-machine {
+    background-color: #ffffff;
+    flex-grow: 1;
+    height: 545px;
+    box-sizing: border-box;
+    padding: 31px 27px 28px;
+}
+
+.section-machine .beverage-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.beverage-list .cola-item {
+    position: relative;
+    width: 94px;
+    height: 130px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    padding: 11px 11px 9px 13px;
+    border-radius: 10px;
+    text-align: center;
+    color: #333333;
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5));
+}
+
+.beverage-list .cola-item:hover {
+    overflow: hidden;
+    outline: 3px solid #6327fe;
+}
+
+.beverage-list .soldout::after {
+    content: "품절";
+    color: transparent;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    border-radius: 10px;
+    opacity: 80%;
+    background-color: black;
+    background-image: url(img/Sold-out.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: 1;
+}
+
+.beverage-list .img-cola {
+    z-index: 1;
+    width: 36px;
+    height: 65px;
+    margin-bottom: 6px;
+    vertical-align: top;
+}
+
+.beverage-list .btn-price {
+    background-color: #6327fe;
+    margin-top: 7px;
+    padding: 5px 16px 5px 15px;
+    border-radius: 50px;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+}
+
+.section-machine form {
+    display: grid;
+    grid-template-columns: 200px 94px;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.section-machine form .btn-balance {
+    background-color: #eae8fe;
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.section-machine form .btn-return-change,
+.section-machine form .btn-deposit {
+    background-color: #ffffff;
+    padding: 6px 0 7px;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 19px;
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5));
+}
+
+.section-machine form .input-deposit {
+    padding-left: 6px;
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+}
+
+.section-machine form .shopping-list,
+.section-basket .purchased-list {
+    background-color: #eae8fe;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 11px;
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    overflow-y: scroll;
+}
+
+form .shopping-list {
+    height: 106px;
+}
+
+.section-basket .purchased-list {
+    height: 364px;
+    margin-top: 13px;
+}
+
+form .shopping-list::-webkit-scrollbar,
+.section-basket .purchased-list::-webkit-scrollbar {
+    width: 4px;
+    background-color: #eae8fe;
+}
+
+form .shopping-list::-webkit-scrollbar-thumb,
+.section-basket .purchased-list::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+    border-radius: 50px;
+}
+
+form .shopping-list li,
+.purchased-list li {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 6px 8px 7px 10px;
+    color: #333333;
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 13px;
+}
+
+form .shopping-list li:not(:last-of-type),
+.purchased-list li:not(:last-of-type) {
+    margin-bottom: 6px;
+}
+
+li .img-sm-cola {
+    width: 18px;
+    height: 33px;
+    vertical-align: top;
+}
+
+li .cola-name {
+    width: 73px;
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 1;
+}
+
+.purchased-list li .cola-name {
+    margin-left: -105px;
+}
+
+li .count-cola {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+}
+
+.section-machine form .btn-acquired {
+    background-color: #6327fe;
+    border-radius: 5px;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 19px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+}
+
+.section-basket {
+    background-color: #eae8fe;
+}
+
+.section-basket .my-balance {
+    background-color: #ffffff;
+    padding: 9px 27px;
+}
+
+.section-basket .my-balance p {
+    background-color: #eae8fe;
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 10px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.section-basket .my-balance p span {
+    font-weight: 700;
+}
+
+.section-basket .my-beverage {
+    background-color: #ffffff;
+    height: 474px;
+    margin-top: 20px;
+    box-sizing: border-box;
+    padding: 25px 27px 26px;
+}
+
+.section-basket h3 {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.section-basket .total-price {
+    margin-top: 6px;
+    text-align: right;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 17px;
+}
